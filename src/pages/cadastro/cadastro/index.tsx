@@ -23,22 +23,36 @@ const Cadastro: React.FC = () => {
             login: userName,
             senha: password
         }
-        
-      async function getData() {
-        try {
 
-          await api.post('usuario', data)
-          alert('pessoa Cadastrado com Sucesso')
-          console.log(data)
+      // async function getData() {
+      //   try {
+
+      //     await api.post('usuario', data)
+      //     alert('pessoa Cadastrado com Sucesso')
+      //     console.log(data)
           
-      } catch (error) {
+      // } catch (error) {
 
-          console.log(data)
-          alert('Erro ao cadastrar usuário')
+      //     console.log(data)
+      //     alert('Erro ao cadastrar usuário')
+      // }
+      // } 
+      try {
+        api.post(`usuarios`, data ).then(
+          response => { 
+              
+            } else {
+              return 
+            }
+           }
+        )
+      } catch (e) {
+        toast.error('algo deu errado')
       }
-      } 
     } 
 
+    } 
+    
     return(
       <>  
       <Container>  
