@@ -7,9 +7,6 @@ export const Container = styled.div`
   background-color: #8c52e5;
   font-family: "Roboto", sans-serif;
 
-  h1 {
-    
-  }
 
   img {
     margin: 50px 0 0 65px;
