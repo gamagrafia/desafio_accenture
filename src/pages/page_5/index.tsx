@@ -13,15 +13,10 @@ const Page5: React.FC = () => {
         </p>
       </div>
       <div>
-      <body>
-        <div className="container">
-          <div className="box">
+        <body>
           <img src={Celular3} alt="celular3" />
-          </div>
-        </div>
-      </body>
+        </body>
       </div>
-      
     </Container>
   );
 };

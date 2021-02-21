@@ -2,13 +2,15 @@ import styled from 'styled-components'
 
 
 export const Container = styled.div`
-height:100vh;
-width:100vw;
+height:100%;
+width:100%;
 display:flex;
+flex-wrap:wrap;
 `
 export const DivPreta = styled.div`
 height:100vh;
 width:50%;
+flex-wrap:wrap;
 background-color: #000000;
     h1{ 
         margin: 60px 39px 15px 107px;
@@ -33,6 +35,7 @@ background-color: #000000;
 export const DivBranca = styled.div`
 height:100vh;
 width:50%;
+flex-wrap:wrap;
 background-color: #F8F8F8;
 
 h1{ 
@@ -55,5 +58,6 @@ h1{
     img {
         margin:0px 107px 0 107px ;
         max-height:450px;
+        min-height:
     }
 `

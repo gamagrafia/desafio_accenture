@@ -3,6 +3,17 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
 
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,400;1,700&display=swap') */
+
+    
+    body
+    
+   {
+   
+   background:url('../imagens/bg-topo.gif') no-repeat;
+   margin:0px;
+   padding:0px;
+   box-sizing: border-box
+   }}
+
 
 `
