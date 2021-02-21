@@ -8,7 +8,7 @@ export const Container = styled.div`
   font-family: "Roboto", sans-serif;
 
   h1 {
-    
+    font-family: "Roboto", sans-serif;
   }
 
   img {
