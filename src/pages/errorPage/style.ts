@@ -35,7 +35,7 @@ export const Error = styled.div`
         background-color: #68DE5A;
         border-radius: 35px;
         font-size: 1.5rem;
-        width: 30%;
+        width: 80%;
         border:0;
         margin-top: 40px;
         padding: 10px 50px;
