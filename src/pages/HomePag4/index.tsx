@@ -1,18 +1,17 @@
 import React from 'react';
-import { BoxComplexidade, BoxTecnologia, Containe } from './style';
+
+import { BoxTecnologia, Container } from './style';
 
 const HomePag4: React.FC = () => {
 return(
-  <Containe>
-    <div>
-      <BoxComplexidade>
-      <h5>O Fim da Complexidade</h5>
-      </BoxComplexidade>
+  <Container>
       <BoxTecnologia>
-        <h4>Para quem sabe que tecnologia e design são melhores do que agências e papelada.</h4>
+      <h5>O Fim da Complexidade</h5>
+      <h4>Para quem sabe que tecnologia e design são melhores do que agências e papelada.</h4>
+
       </BoxTecnologia>
-      </div>
-  </Containe>
+        
+  </Container>
 )
 }
 
