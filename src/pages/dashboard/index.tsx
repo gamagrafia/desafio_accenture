@@ -14,7 +14,7 @@ const Dashboard: React.FC = () => {
                 
                 <SideBar>
                     <img src={logoDash} alt="Logo Dashboard" />
-                    <SideBarButton><AiOutlineBank size={35} />Depósitos</SideBarButton>
+                    <SideBarButton><AiOutlineBank size={35} />DEPOSITAR</SideBarButton>
                     <SideBarButton><AiOutlineBank size={35} />Planos</SideBarButton>
                     <SideBarButton><AiOutlineBank size={35} />Pagamentos</SideBarButton>
                     <SideBarButton><AiOutlineBank size={35} />Transações</SideBarButton>
