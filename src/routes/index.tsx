@@ -5,6 +5,7 @@ import Dashboard from '../pages/dashboard';
 import ErrorPage from '../pages/errorPage';
 import Home from '../pages/home';
 import Login from '../pages/login';
+import PassRequest from '../pages/passRequest';
 import RecoveryPass from '../pages/recoveryPass';
 
 const Routes: React.FC = () => {
@@ -18,6 +19,8 @@ const Routes: React.FC = () => {
       <Route path="/dashboard" component={Dashboard} />
       {/* <Route path="/first" exact component={HomePag3} />
       <Route path="/second" component={HomePag4} /> */}
+      <Route path="/passrequest" component={PassRequest} />
+
       <Route path="/recoveryPass" component={RecoveryPass} />
     </Switch>
   );
