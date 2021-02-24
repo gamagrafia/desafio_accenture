@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Container } from './style'
-import Logo from '../../img/logo.png'
-import CardLogin from '../../components/cardLogin';
-
-
-
-const Login: React.FC = () => {
-  return (
-      <Container>
-          <img src={Logo} alt= "logo-gama"/>
-          <CardLogin/>   
-      </Container>
- );
-=======
-import React, { useState, FormEvent, useEffect } from 'react';
+import React { useState, FormEvent, useEffect } from 'react';
 
 import { Link, useHistory } from "react-router-dom";
 
@@ -109,7 +93,6 @@ const Login: React.FC = () => {
       </LoginPage>
     </>
   );
->>>>>>> 7cad1faf199bd5033c36cc35791c19e9fee3d478
 }
 
 export default Login;

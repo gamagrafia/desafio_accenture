@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Dashboard from '../pages/dashboard';
@@ -21,32 +20,3 @@ const Routes: React.FC = () => {
 
 
 export default Routes;
-=======
-import React from 'react'
-
-import { Switch, Route } from "react-router-dom";
-
-import PrivateRoute from './privateRoute'
-
-import Home from "../pages/home";
-import Login from "../pages/login";
-import Error from "../pages/error";
-import RecoveryPass from "../pages/recoveryPass";
-import DashBoard from "../pages/dashBoard";
-
-
-const Routes: React.FC = () => {
-    
-    return (
-        <Switch>
-            <Route path="/" exact component={Home}/>
-            <Route path="/login" component={Login}/>
-            <Route path="/error" component={Error}/>
-            <Route path="/recoveryPass" component={RecoveryPass}/>
-            <PrivateRoute path="/dashboard" component={DashBoard}/>
-        </Switch>
-    )
-}
-
-export default Routes
->>>>>>> 7cad1faf199bd5033c36cc35791c19e9fee3d478
