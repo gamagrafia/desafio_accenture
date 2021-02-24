@@ -7,21 +7,17 @@ import Home from '../pages/home';
 import Login from '../pages/login';
 import PassRequest from '../pages/passRequest';
 import RecoveryPass from '../pages/recoveryPass';
+import PrivateRoute from './privateRoute';
 
 const Routes: React.FC = () => {
   return (
     <Switch>
       <Route path="/" exact component={Home} />
-      {/* <Route path="/page5" component={Page5} />
-      <Route path="/page2" exact component={Page2} /> */}
       <Route path="/login" component={Login} />
+      <Route path="/passRequest" component={PassRequest} />
+      <PrivateRoute  path="/recovery" component={RecoveryPass} />
       <Route path="/error" component={ErrorPage} />
-      <Route path="/dashboard" component={Dashboard} />
-      {/* <Route path="/first" exact component={HomePag3} />
-      <Route path="/second" component={HomePag4} /> */}
-      <Route path="/passrequest" component={PassRequest} />
-
-      <Route path="/recoveryPass" component={RecoveryPass} />
+      <PrivateRoute path="/dashboard" component={Dashboard} />
     </Switch>
   );
 };
