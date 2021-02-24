@@ -2,7 +2,7 @@ import React, { useState, FormEvent } from 'react';
 import { Link, useHistory } from "react-router-dom";
 import { toast } from 'react-toastify'
 import { Container, Header, SectionOne, Form , SideLeft, SideRight} from "./style"
-import Logo from "../../img/gama-academy-logo.png";
+import Logo from "../../img/gama-academy-logo.png"; =/../img/gama-academy-logo.png
 import Arrow from "../../img/arrow.png";
 import ArrowGray from "../../img/arrowgray.png";
 
