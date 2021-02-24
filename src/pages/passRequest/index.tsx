@@ -17,7 +17,7 @@ const PassRequest: React.FC = () => {
 
 
     const [senhaProvisoria, setSenhaProvisoria] = useState<IToken>((): any => {
-        let storageSenha = () => localStorage.getItem('@tokenApp')
+        let storageSenha = () => localStorage.getItem('@tempPass')
         console.log(storageSenha);
         return storageSenha();
     })
@@ -41,7 +41,7 @@ const PassRequest: React.FC = () => {
         try {
             api.post("/nova-senha", dataRequest).then(
                 response => {
-                    localStorage.setItem('@tokenApp', response.data);
+                    localStorage.setItem('@tempPass', response.data);
                     alert('Sua senha foi enviada para o seu email, registre uma nova!');
                     setEmail("");
                     setLogin("");

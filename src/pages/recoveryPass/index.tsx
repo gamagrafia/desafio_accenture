@@ -14,7 +14,7 @@ const RecoveryPass: React.FC = () => {
   const[senhaTemporaria, setSenhaTemporaria] = useState('');
   const history = useHistory();
 
-  const token = localStorage.getItem('@tokenApp');
+  const token = localStorage.getItem('@tempPass');
   
 
   function handleRecoveryPass(e:FormEvent<HTMLFormElement>) {
