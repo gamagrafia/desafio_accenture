@@ -1,17 +1,23 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
+
 
 export default createGlobalStyle`
 
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800;900&display=swap');
-  body {
-    font-family: 'Roboto Slab', serif;
-  }
-
-*{
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
+    *{
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+    }
+ 
     
-}`
+
+    button{
+
+        cursor: pointer;
+    }
+
+    
+`

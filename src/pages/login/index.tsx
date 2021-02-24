@@ -1,16 +1,21 @@
 import React from 'react';
-import { Container } from './style'
-import Logo from '../../img/logo.png'
+
 import CardLogin from '../../components/cardLogin';
+import Logo from '../../components/logo';
+import { Container } from './style';
 
 
 
 const Login: React.FC = () => {
   return (
+      <>
+      <Logo />
       <Container>
-          <img src={Logo} alt= "logo-gama"/>
+          {/* <img src={Logo} alt= "logo-gama"/> */}
+          
           <CardLogin/>   
       </Container>
+      </>
  );
 }
 

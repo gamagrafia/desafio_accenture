@@ -10,14 +10,16 @@ export const ErrorContainer = styled.main`
 `;
 
 export const Error = styled.div`
-    background-color: #fff;
-    width: 25%;
-    height: 422px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
+    
+    width:430px;
+    height:450px;
+    background-color:#fff;
+    margin:auto;
+    border-radius:3px;
+    display:flex;
     align-items:center;
-    justify-content:center;
+    flex-direction:column;
+    justify-content:center;  
 
     h3{
         margin-top: 40px;
@@ -33,7 +35,7 @@ export const Error = styled.div`
         background-color: #68DE5A;
         border-radius: 35px;
         font-size: 1.5rem;
-        width: 78%;
+        width: 80%;
         border:0;
         margin-top: 40px;
         padding: 10px 50px;

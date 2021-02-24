@@ -1,7 +1,8 @@
 import React from 'react';
-import { Container, DivPreta,DivBranca } from './style';
-import Celular1 from '../../img/app-bg 1.png'
-import Celular2 from '../../img/app-bg 2.png'
+
+import Celular1 from '../../img/app-bg 1.png';
+import Celular2 from '../../img/app-bg 2.png';
+import { Container, DivBranca, DivPreta } from './style';
 
 
 
