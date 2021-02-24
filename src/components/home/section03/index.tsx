@@ -2,7 +2,7 @@ import React from 'react';
 
 import { BoxTecnologia, Container } from './style';
 
-const HomePag4: React.FC = () => {
+const Section03: React.FC = () => {
 return(
   <Container>
       <BoxTecnologia>
@@ -15,4 +15,4 @@ return(
 )
 }
 
-export default HomePag4;
+export default Section03;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { BoxAnuidade, BoxText, Container } from './style';
 
-const Home: React.FC = () => {
+const Section02: React.FC = () => {
   return (
     <Container>
       
@@ -24,4 +24,4 @@ const Home: React.FC = () => {
   );
 }
 
-export default Home;
+export default Section02;
