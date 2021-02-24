@@ -15,8 +15,7 @@ const Home: React.FC = () => {
             <Section01 />
             <Section02 />
             <Section03 />
-            <Section04 />
-            
+            <Section04 />       
         </Container>
     );
 
