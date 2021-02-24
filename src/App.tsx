@@ -5,8 +5,6 @@ import Routes from './routes';
 import GlobalStyle from './style/style';
 
 
-
-
 const App: React.FC = () => {
   return (
     <>
@@ -15,7 +13,7 @@ const App: React.FC = () => {
       </BrowserRouter>
     <GlobalStyle/>
     
-    </>     
+    </>
   );
 }
 
