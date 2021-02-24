@@ -1,18 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from "../../img/gama-academy-logo.png";
-import ArrowWhite from "../../img/arrowwhite.png";
 
-import {RecoveryContainer, Header, Content, Form} from "./style"
+import Logo from '../../components/logo';
+import ArrowWhite from '../../img/arrowwhite.png';
+import { Content, Form, RecoveryContainer } from './style';
 
 const RecoveryPass: React.FC = () => {
   return (
+    <>
+    <Logo />
     <RecoveryContainer>
-      <Header>
+      {/* <Header>
           <Link to="/">
             <img className="logo-gama" src={Logo} alt=""/>
           </Link>
-      </Header>  
+      </Header>   */}
         <Content>
         <Form /* onSubmit={} */>  
           {/*<form action=""> */}
@@ -33,6 +35,7 @@ const RecoveryPass: React.FC = () => {
       </Form>            
       </Content>   
     </RecoveryContainer>
+    </>
   );
 }
 
