@@ -8,6 +8,7 @@ import { BankPostBox, BoxAccount, DashContainer, MainContent, SideBar, SideBarBu
 
 
 const Dashboard: React.FC = () => {
+
     return (
         <>  
             <DashContainer>
@@ -21,7 +22,7 @@ const Dashboard: React.FC = () => {
                 </SideBar>
                 <MainContent>
                     <div>
-                        <h2>Olá Usuário, seja bem vindo!</h2>
+                        <h2>Olá , seja bem vindo!</h2>
                         <AiOutlineEyeInvisible color=" #68DE5A" size={40} />
                     </div>
                     

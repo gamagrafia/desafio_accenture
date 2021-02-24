@@ -10,9 +10,7 @@ const Login: React.FC = () => {
   return (
       <>
       <Logo />
-      <Container>
-          {/* <img src={Logo} alt= "logo-gama"/> */}
-          
+      <Container>          
           <CardLogin/>   
       </Container>
       </>
