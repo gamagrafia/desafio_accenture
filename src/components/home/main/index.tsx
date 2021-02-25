@@ -29,9 +29,10 @@ const Main: React.FC = () => {
     }
 
     if (password !== confirmPass) {
-      toast.error('Sua senha está incorreta!')
+      alert('Ops, as senhas devems er iguais, tente novamente!')
       return;
-    } else {
+    
+    } 
       try {
         api.post("/usuarios", postData).then(
           response => {
@@ -52,7 +53,7 @@ const Main: React.FC = () => {
       } catch (e) {
         toast.error('algo deu errado')
       }
-    }
+    
 
   }
 
