@@ -1,7 +1,7 @@
 import React, { ComponentType } from 'react';
 import { Redirect, Route, RouteProps } from 'react-router-dom';
 
-import { isAuthenticated } from '../services/isAuth';
+import { isTempPassAuthenticated } from '../services/isAuth';
 
 // Interfaces:
 
@@ -16,7 +16,7 @@ const PrivateRoute: React.FC<PrivateRouteProps> = ({
 
     (<Route
         {...rest}
-        render={props => isAuthenticated()
+        render={props => isTempPassAuthenticated()
             ?
             (<Component />)
             :

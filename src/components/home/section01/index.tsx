@@ -1,11 +1,12 @@
 import React from 'react';
-import { Container, DivPreta,DivBranca } from './style';
-import Celular1 from '../../img/app-bg 1.png'
-import Celular2 from '../../img/app-bg 2.png'
+
+import Celular1 from '../../../img/app-bg 1.png';
+import Celular2 from '../../../img/app-bg 2.png';
+import { Container, DivBranca, DivPreta } from './style';
 
 
 
-const Page2: React.FC = () => {
+const Section01: React.FC = () => {
   return (
   <Container>
 
@@ -27,4 +28,4 @@ const Page2: React.FC = () => {
   )
 }
 
-export default Page2;
+export default Section01;

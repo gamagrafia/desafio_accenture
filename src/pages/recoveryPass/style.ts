@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled from 'styled-components';
 
 export const RecoveryContainer = styled.div`    
     background-color: #8C52E5;    
@@ -6,20 +6,20 @@ export const RecoveryContainer = styled.div`
     //height: 100vh;
     
 `
-export const Header = styled.div`
-    height: 10vh;
-    img{
-        padding: 40px;
-    }
+// export const Header = styled.div`
+//     height: 10vh;
+//     img{
+//         padding: 40px;
+//     }
     
-    @media(max-width: 700px){
-        width:100%;
-        display: flex;
-        justify-content: center;
-        align-items:center;
-        margin-top: 20px;        
-    }
-`
+//     @media(max-width: 700px){
+//         width:100%;
+//         display: flex;
+//         justify-content: center;
+//         align-items:center;
+//         margin-top: 20px;        
+//     }
+// `
 export const Content = styled.div`
     display: flex;
     justify-content: center;
@@ -43,6 +43,7 @@ export const Form = styled.form`
         font-size:20px;
         font-weight: 700px;
         padding: 5px;
+        margin-bottom: 10px;
     }
 
     p{
@@ -91,7 +92,7 @@ export const Form = styled.form`
     display:flex;
     justify-content: center;
     align-items: center;  
-    width:80%;     
+    width:70%;     
     
 }
 `
