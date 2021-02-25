@@ -12,6 +12,7 @@
     "@types/react-dom": "^17.0.0",
     "axios": "^0.21.1",
     "jwt-decode": "^3.1.2",
+    "mime": "^1.6.0",
     "polished": "^4.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
