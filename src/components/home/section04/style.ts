@@ -6,6 +6,7 @@ display:flex;
 justify-content: space-around; */
 height:100vh;
 width:100%;
+background-color: #fff;
 /* flex-wrap:wrap; */
 /* 
     div{ 
@@ -51,6 +52,7 @@ export const BxHomeFive = styled.div`
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    height: 100%;
 
     h1,p {
         width: 50%;
@@ -73,18 +75,25 @@ export const BxHomeFive = styled.div`
 
     @media(max-width: 1024px){
        width: 100%;
-       margin: 100px 0px 0px 0px;
+       margin: 10px 0px 0px 0px;
 
        h1{
-        font-size:35px;
+        font-size:25px;
         font-weight:900;
-        padding-bottom: 50px;
+        padding-bottom: 20px;
     }
 
     p {
         font-weight:400px;
-        font-size:18px;
-        line-height: 40px;
+        font-size:16px;
+        line-height: 20px;
+    }
+    div{
+        display:flex;
+        justify-content:center;
+        img{
+            width: 65%;
+        }
     }
        
     }

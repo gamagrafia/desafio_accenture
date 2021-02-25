@@ -1,13 +1,22 @@
 import React from 'react';
 import { AiOutlineBank, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { GiWallet } from 'react-icons/gi';
-import { RiMoneyDollarCircleLine } from 'react-icons/ri';
+import { RiCloseLine, RiMoneyDollarCircleLine } from 'react-icons/ri';
+import { useHistory } from 'react-router-dom';
 
 import logoDash from '../../img/logo-dash.svg';
 import { BankPostBox, BoxAccount, DashContainer, MainContent, SideBar, SideBarButton } from './style';
 
 
+
 const Dashboard: React.FC = () => {
+    const history = useHistory();
+    
+    function closeSession() {
+        localStorage.clear();
+        history.push('/')
+    }
+
     return (
         <>  
             <DashContainer>
@@ -21,7 +30,7 @@ const Dashboard: React.FC = () => {
                 </SideBar>
                 <MainContent>
                     <div>
-                        <h2>Olá Usuário, seja bem vindo!</h2>
+                        <h2>Olá , seja bem vindo!</h2><RiCloseLine onClick={closeSession} size={40} />
                         <AiOutlineEyeInvisible color=" #68DE5A" size={40} />
                     </div>
                     

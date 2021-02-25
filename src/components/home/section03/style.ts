@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import img from '../../img/img.png';
+import img from '../../../img/img.png';
 
 export const Container =styled.div`
     background: url(${img});

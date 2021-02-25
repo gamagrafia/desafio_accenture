@@ -1,10 +1,8 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
-import Routes from './routes';
-import GlobalStyle from './style/style';
-
-
+import Routes from './routes/routes';
+import GlobalStyle from './style/global';
 
 
 const App: React.FC = () => {
@@ -15,7 +13,7 @@ const App: React.FC = () => {
       </BrowserRouter>
     <GlobalStyle/>
     
-    </>     
+    </>
   );
 }
 

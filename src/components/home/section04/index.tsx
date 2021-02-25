@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Celular3 from '../../img/pngkey 1.png';
+import Celular3 from '../../../img/pngkey 1.png';
 import { BxHomeFive, Container } from './style';
 
-const Page5: React.FC = () => {
+const Section04: React.FC = () => {
   return (
     <Container>
       <BxHomeFive>
@@ -26,4 +26,4 @@ const Page5: React.FC = () => {
   );
 };
 
-export default Page5;
+export default Section04;

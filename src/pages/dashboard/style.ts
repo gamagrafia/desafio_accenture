@@ -72,6 +72,10 @@ export const MainContent = styled.main`
     align-items: flex-start;
     justify-content: flex-start;
 
+    svg {
+        cursor:pointer;
+    }
+
     h2{
         width: 100%;
         color: #fff;
