@@ -1,18 +1,20 @@
-import React, { FormEvent, useEffect, useState } from 'react';
+import React, { FormEvent, useCallback, useEffect, useState } from 'react';
 import { FiArrowRight, FiChevronRight } from 'react-icons/fi';
+import { useDispatch } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
 
 import api from '../../services/api';
+import { addNewUser } from '../../store/modules/user/actions';
+import { IToken } from '../../store/modules/user/interfaces';
 import { Container, LinkSections } from './style';
 
 
-export interface IToken {
-  storage: string;
-}
+
 
 const CardLogin: React.FC = () => {
-
   const history = useHistory();
+  const dispatch = useDispatch()
+
 
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
@@ -24,14 +26,14 @@ const CardLogin: React.FC = () => {
   })
 
   useEffect(() => {
-    !!storage 
-    ?
-    history.push('/dashboard')
-    :
-    localStorage.clear()
+    !!storage
+      ?
+      history.push('/dashboard')
+      :
+      localStorage.clear()
   }, [storage])
-    
-  function handleLogin(event: FormEvent<HTMLFormElement>) {
+
+  const handleLogin = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const loginData = {
@@ -39,25 +41,18 @@ const CardLogin: React.FC = () => {
       senha: password
     }
 
-    try {
-      api.post('/login', loginData).then(
-        response => {
-          localStorage.setItem('@tokenApp', response.data.token);
-          console.log('Token cadastrado!');
-          history.push("/dashboard");
-        }
-      ).catch((e) => {
-        history.push("/error");
 
-      })
+    api.post('/login', loginData).then(
+      response => {
+        // console.log(response.data)
+        localStorage.setItem('@tokenApp', response.data.token);
+        alert('logado')
+        dispatch(addNewUser(response.data))
+        history.push('/dashboard')
+      }
 
-    }
-    catch(e){
-      alert(e.message);
-    }
-
+    )
   }
-
 
   return (
     <Container>
@@ -69,16 +64,16 @@ const CardLogin: React.FC = () => {
           Continuar <FiArrowRight size={25} />
         </button>
       </form>
-        <LinkSections>
-          <Link to="/passrequest">
-            Esqueci minha senha <FiChevronRight size={20} />
-          </Link>
-          <br />
-          <Link to="/">
-            Ainda não sou cliente <FiChevronRight size={20} />
-          </Link>
-        </LinkSections>
-     
+      <LinkSections>
+        <Link to="/passrequest">
+          Esqueci minha senha <FiChevronRight size={20} />
+        </Link>
+        <br />
+        <Link to="/">
+          Ainda não sou cliente <FiChevronRight size={20} />
+        </Link>
+      </LinkSections>
+
     </Container>
   );
 };
