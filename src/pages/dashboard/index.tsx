@@ -1,21 +1,70 @@
-import React from 'react';
+import React , { useEffect, useState} from 'react';
 import { AiOutlineBank, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { GiWallet } from 'react-icons/gi';
 import { RiCloseLine, RiMoneyDollarCircleLine } from 'react-icons/ri';
 import { useHistory } from 'react-router-dom';
-
 import logoDash from '../../img/logo-dash.svg';
 import { BankPostBox, BoxAccount, DashContainer, MainContent, SideBar, SideBarButton } from './style';
+import api from '../../services/api';
+import jwt_decote from 'jwt-decode';
 
+interface IUser{
+    idUsuario: number,
+    sub: string
+  }
 
+  interface IDataAccount{
+    contaBanco:{
+      saldo: number,
+      id: number,
+      lancamentos: any
+    },
+    contaCredito:{
+      saldo: number,
+      id: number,
+      lancamentos: any
+    }
+  
+  }
 
 const Dashboard: React.FC = () => {
     const history = useHistory();
-    
+    const [ dataAccount, setDataAccount ] = useState<IDataAccount>();
+
     function closeSession() {
         localStorage.clear();
         history.push('/')
     }
+
+    const TokenStorage = null || localStorage.getItem('@tokenApp')
+
+    const TokenDecodedValue = () => {
+        if (TokenStorage){
+          const TokenArr = TokenStorage.split(' ')
+          const TokenDecode = TokenArr[1]
+          const decoded = jwt_decote<IUser>(TokenDecode);
+          return decoded.sub;
+        } else {
+          alert('err')
+        }
+      }
+
+    useEffect( () => {
+        let storageToken = () => localStorage.getItem('@tokenApp');
+
+        api.get(`dashboard?fim=2021-01-31&inicio=2021-01-01&login=${TokenDecodedValue()}`, {
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': storageToken()
+          }
+        }).then(
+          response => {
+            setDataAccount(response.data)
+          }
+        ).catch( e => {
+          console.log(e)
+        })
+      }, [] )
 
     return (
         <>  

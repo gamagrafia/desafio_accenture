@@ -20,6 +20,7 @@ const CardLogin: React.FC = () => {
   const [storage, setStorage] = useState<IToken>((): any => {
     let storageToken = () => localStorage.getItem('@tokenApp')
     console.log(storageToken);
+
     return storageToken();
   })
 
