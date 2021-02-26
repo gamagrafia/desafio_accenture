@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { AiOutlineBank, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { GiWallet } from 'react-icons/gi';
 import { RiCloseLine, RiMoneyDollarCircleLine } from 'react-icons/ri';
@@ -8,7 +8,6 @@ import logoDash from '../../img/logo-dash.svg';
 import { BankPostBox, BoxAccount, DashContainer, MainContent, SideBar, SideBarButton } from './style';
 
 
-
 const Dashboard: React.FC = () => {
     const history = useHistory();
     
@@ -16,6 +15,9 @@ const Dashboard: React.FC = () => {
         localStorage.clear();
         history.push('/')
     }
+
+    
+
 
     return (
         <>  

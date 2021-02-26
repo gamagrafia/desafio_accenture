@@ -1,7 +1,6 @@
-import React, { FormEvent, useState } from 'react';
+import React, { FormEvent, useCallback, useEffect, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import { Link, useHistory } from 'react-router-dom';
-import { toast } from 'react-toastify';
 
 import Arrow from '../../../img/arrowwhite.png';
 import api from '../../../services/api';
@@ -10,7 +9,7 @@ import { Container, Form, SectionOne, SideLeft } from './style';
 
 const Main: React.FC = () => {
 
-  const history = useHistory()
+  const history = useHistory();
 
   const [cpf, setCpf] = useState('')
   const [name, setName] = useState('')
@@ -31,29 +30,29 @@ const Main: React.FC = () => {
     if (password !== confirmPass) {
       alert('Ops, as senhas devems er iguais, tente novamente!')
       return;
-    
-    } 
-      try {
-        api.post("/usuarios", postData).then(
-          response => {
-            if (response.status === 200) {
-              console.log(response.status)
-              alert("Registrado")
-              history.push('/login')
-            }
+
+    }
+    try {
+      api.post("/usuarios", postData).then(
+        response => {
+          if (response.status === 200) {
+            console.log(response.status)
+            alert("Registrado")
+            history.push('/login')
           }
-        ).catch((e) => {
-          if(e.response.status === 400){
-            console.clear();
-            alert(`Usuario: ${userName} ja esta sendo usado! Tente outro.`)
-          }else {
-            alert(`Error message: ${e.message}`)
-          }
-        })
-      } catch (e) {
-        toast.error('algo deu errado')
-      }
-    
+        }
+      ).catch((e) => {
+        if (e.response.status === 400) {
+          // console.clear();
+          alert(`Usuario: ${userName} ja esta sendo usado! Tente outro.`)
+        } else {
+          alert(`Error message: ${e.message}`)
+        }
+      })
+    } catch (e) {
+      alert('algo deu errado')
+    }
+
 
   }
 
@@ -76,11 +75,11 @@ const Main: React.FC = () => {
             <h4>
               Peça sua conta e cartão de crédito Gama Bank
           </h4>
-            <input type="text" value={cpf} onChange={e => setCpf(e.target.value)} placeholder="Digite seu CPF" />
-            <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="Nome completo" />
-            <input type="text" value={userName} onChange={e => setUserName(e.target.value)} placeholder="Nome do usuário" />
-            <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Digite sua senha" />
-            <input type="password" value={confirmPass} onChange={e => setConfirmPass(e.target.value)} placeholder="Confirme sua senha" />
+            <input type="text" name="cpf" value={cpf} onChange={e => setCpf(e.target.value)} placeholder="Digite seu CPF" />
+            <input type="text" name="name" value={name} onChange={e => setName(e.target.value)} placeholder="Nome completo" />
+            <input type="text" name="username" value={userName} onChange={e => setUserName(e.target.value)} placeholder="Nome do usuário" />
+            <input type="password" name="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Digite sua senha" />
+            <input type="password" name="confirmPass" value={confirmPass} onChange={e => setConfirmPass(e.target.value)} placeholder="Confirme sua senha" />
 
             <button type="submit">Continuar <FiArrowRight size={20} /></button>
 

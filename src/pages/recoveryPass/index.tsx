@@ -14,7 +14,7 @@ const RecoveryPass: React.FC = () => {
   const[senhaTemporaria, setSenhaTemporaria] = useState('');
   const history = useHistory();
 
-  const token = localStorage.getItem('@tempPass');
+  const tempPass = localStorage.getItem('@tempPass');
   
 
   function handleRecoveryPass(e:FormEvent<HTMLFormElement>) {
@@ -26,7 +26,7 @@ const RecoveryPass: React.FC = () => {
     } 
 
     
-      api.post(`/altera-senha?senhaTemporaria=${token}`, dt).then(
+      api.post(`/altera-senha?senhaTemporaria=${tempPass}`, dt).then(
         response => {
           if(response.status === 200){
             localStorage.clear();

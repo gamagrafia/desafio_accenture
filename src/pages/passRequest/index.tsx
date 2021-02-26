@@ -2,12 +2,15 @@ import React, { FormEvent, useEffect, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import { useHistory } from 'react-router-dom';
 
-import { IToken } from '../../components/cardLogin';
 import { Container } from '../../components/cardLogin/style';
 import api from '../../services/api';
 import { ContainerPassRequest } from './style';
 
 // import { Container } from './styles';
+
+interface ITempPass {
+    storage: string;
+}
 
 const PassRequest: React.FC = () => {
     const history = useHistory();
@@ -16,7 +19,7 @@ const PassRequest: React.FC = () => {
     const [email, setEmail] = useState("");
 
 
-    const [senhaProvisoria, setSenhaProvisoria] = useState<IToken>((): any => {
+    const [senhaProvisoria, setSenhaProvisoria] = useState<ITempPass>((): any => {
         let storageSenha = () => localStorage.getItem('@tempPass')
         console.log(storageSenha);
         return storageSenha();
