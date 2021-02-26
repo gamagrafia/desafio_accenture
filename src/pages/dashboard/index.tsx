@@ -60,6 +60,7 @@ const Dashboard: React.FC = () => {
         }).then(
           response => {
             setDataAccount(response.data)
+            console.log(response.data)
           }
         ).catch( e => {
           console.log(e)
@@ -110,16 +111,33 @@ const Dashboard: React.FC = () => {
                     </div>
 
                     <BankPostBox>
-                        <div className="ttl-componente"><RiMoneyDollarCircleLine color="9B9B9B" size={50} /><h4>Ultimos lançamentos</h4></div>
+                        <div className="ttl-componente"><RiMoneyDollarCircleLine color="9B9B9B" size={50} /><h4>Últimos lançamentos</h4></div>
                         <div>
                             <GiWallet className="dash_post_icon" color="9B9B9B" size={35} />
                             <div>
                                 <h3>Compra no Debito</h3>
-                                <h4>Gama Academy</h4>
-                                <div className="lancamentos" >
-                                    <h1>R$100,00</h1>
-                                    <p>24nov</p>
-                                </div>
+                                
+                                { dataAccount?.contaBanco.lancamentos.map( ( account: any, index: number ) => (
+                                  <div key={index} className="lancamentos">
+                                    <h4>{account.descricao}</h4>
+                                    <h1>{account.valor}</h1>
+                                    <p>{account.data}</p>
+                                  </div>
+                                ))}
+                                
+                            </div>
+
+                            <div>
+                                <h3>Compra no Crédito</h3>
+                                
+                                { dataAccount?.contaCredito.lancamentos.map( ( account: any, index: number ) => (
+                                  <div key={index} className="lancamentos">
+                                    <h4>{account.descricao}</h4>
+                                    <h1>{account.valor}</h1>
+                                    <p>{account.data}</p>
+                                  </div>
+                                ))}
+                                
                             </div>
                         </div>
                     </BankPostBox>
