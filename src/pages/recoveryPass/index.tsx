@@ -14,8 +14,9 @@ const RecoveryPass: React.FC = () => {
   const[senhaTemporaria, setSenhaTemporaria] = useState('');
   const history = useHistory();
 
-  const token = localStorage.getItem('@tempPass');
-  
+  const tempPass = localStorage.getItem('@tempPass');
+  // const state = useSelector((state:IUserState) => state.users)
+  // console.log(state)
 
   function handleRecoveryPass(e:FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -24,9 +25,8 @@ const RecoveryPass: React.FC = () => {
       senha: senha,
       senhaTemporaria: senhaTemporaria
     } 
-
     
-      api.post(`/altera-senha?senhaTemporaria=${token}`, dt).then(
+      api.post(`/altera-senha?senhaTemporaria=${tempPass}`, dt).then(
         response => {
           if(response.status === 200){
             localStorage.clear();
@@ -53,6 +53,7 @@ const RecoveryPass: React.FC = () => {
 
         <Content>
           <Form onSubmit={handleRecoveryPass}>
+            
             <h4>
               Esqueci minha senha
           </h4>
