@@ -1,6 +1,6 @@
 import { Reducer } from 'redux';
 
-import { IUserState } from '../../modules/user/interfaces';
+import { IDataAccount, IDataAccountState, IUserState } from '../../modules/user/interfaces';
 import { IUser } from './interfaces';
 import { Types } from './types';
 
@@ -9,6 +9,9 @@ const INITIAL_STATE: IUserState = {
     
 }
 
+const INITIAL_DATA_ACCOUNT: IDataAccountState = {
+    lancamentos: [],
+}
 
 export const allUsers: Reducer<IUser | any> = (state = INITIAL_STATE.users, action) => {
     switch (action.type) {
@@ -37,6 +40,28 @@ export const allUsers: Reducer<IUser | any> = (state = INITIAL_STATE.users, acti
             
         }
 
+
+        default:
+            return state
+
+    }
+
+}
+
+export const lancamentosUsers: Reducer<IDataAccount | any> = (state = INITIAL_DATA_ACCOUNT, action) => {
+    switch (action.type) {
+        case Types.LANCAMENTOS: {
+            console.log('lancamentos', action.payload);
+
+            //const userContent = action.paylod;
+
+            return {
+                ...state,
+                lancamentos: [
+                    action.payload.dataAccount
+                ]
+            }
+        };
 
         default:
             return state

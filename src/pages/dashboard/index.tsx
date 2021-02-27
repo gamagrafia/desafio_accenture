@@ -2,38 +2,30 @@ import React , { useEffect, useState} from 'react';
 import { AiOutlineBank, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { GiWallet } from 'react-icons/gi';
 import { RiCloseLine, RiMoneyDollarCircleLine } from 'react-icons/ri';
-//import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import logoDash from '../../img/logo-dash.svg';
 //import { IUserState } from '../../store/modules/user/interfaces';
 import { BankPostBox, BoxAccount, DashContainer, MainContent, SideBar, SideBarButton } from './style';
 import api from '../../services/api';
 import jwt_decote from 'jwt-decode';
+import { IDataAccount, IDataAccountState, IUserState, IUserDash } from '../../store/modules/user/interfaces'
+import { ActionsCreators } from '../../store/modules/user/actions';
 
-interface IUser{
-    idUsuario: number,
-    sub: string
-  }
 
-  interface IDataAccount{
-    contaBanco:{
-      saldo: number,
-      id: number,
-      lancamentos: any
-    },
-    contaCredito:{
-      saldo: number,
-      id: number,
-      lancamentos: any
-    }
-  
-  }
-const Dashboard: React.FC = (props) => {
+
+const Dashboard: React.FC = () => {
+
+    //const stateLancamento = useSelector((state: IUserState) => state.users )
+
+    const stateLancamento = useSelector((state: IDataAccountState) => state.lancamentos)
 
     const history = useHistory();
-    const [ dataAccount, setDataAccount ] = useState<IDataAccount>();
+   // const [ dataAccount, setDataAccount ] = useState<IDataAccount>();
 
-   // const dispatch = useDispatch();
+    const dispatch = useDispatch();
+
+    const [lancamento, setlancamento] = useState <IDataAccountState>()
 
     
     //Fechar tela e remover token
@@ -42,13 +34,13 @@ const Dashboard: React.FC = (props) => {
         history.push('/')
     }
 
-    const TokenStorage = null || localStorage.getItem('@tokenApp')
+   const TokenStorage = null || localStorage.getItem('@tokenApp')
 
     const TokenDecodedValue = () => {
         if (TokenStorage){
           const TokenArr = TokenStorage.split(' ')
           const TokenDecode = TokenArr[1]
-          const decoded = jwt_decote<IUser>(TokenDecode);
+          const decoded = jwt_decote<IUserDash>(TokenDecode);
           console.log(decoded.sub);
           return decoded.sub;
         } else {
@@ -56,13 +48,13 @@ const Dashboard: React.FC = (props) => {
         }
 
       }
-      console.log(TokenDecodedValue);
+      console.log(TokenDecodedValue); 
 
     useEffect( () => {
-        let storageToken = () => localStorage.getItem('@tokenApp');
-        console.log(storageToken);
-        //dashboard?fim=2021-01-31&inicio=2021-01-01&login=${TokenDecodedValue()}
         
+        let storageToken = () => localStorage.getItem('@tokenApp');
+       // console.log(storageToken);
+           
         api.get(`/dashboard?fim=2021-01-31&inicio=2021-01-31&login=${TokenDecodedValue()}`, {
           headers: {
             'Content-Type': 'application/json',
@@ -70,15 +62,20 @@ const Dashboard: React.FC = (props) => {
           }
         }).then(
           response => {
-            setDataAccount(response.data)
-            console.log(response.data)
+           // setDataAccount(response.data)
+           dispatch(ActionsCreators.lancamento(response.data))
+           setlancamento(response.data)
+           console.log(stateLancamento);        
           }
         ).catch( e => {
           console.log(e)
-        })
-      }, [] )
 
-    
+        })
+        
+      }, [dispatch] )
+
+  
+        
   
    // const globalState = useSelector((state:IUserState) => state.users);
     
@@ -136,27 +133,27 @@ const Dashboard: React.FC = (props) => {
                             <div>
                                 <h3>Compra no Debito</h3>
                                 
-                                { dataAccount?.contaBanco.lancamentos.map( ( account: any, index: number ) => (
+                                {/* { dataAccount?.contaBanco.lancamentos.map( ( account: any, index: number ) => (
                                   <div key={index} className="lancamentos">
                                     <h4>{account.descricao}</h4>
                                     <h1>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(account.valor)}</h1>
-                                    <p>{account.data.substring(6)}</p>
+                                    <p>{account.data}</p>
                                   </div>
-                                ))}
+                                ))} */}
                                 
                             </div>
 
                             <div>
                                 <h3>Compra no Crédito</h3>
                                 
-                                { dataAccount?.contaCredito.lancamentos.map( ( account: any, index: number ) => (
+                               {/*  { dataAccount?.contaCredito.lancamentos.map( ( account: any, index: number ) => (
                                   <div key={index} className="lancamentos">
                                     <h4>{account.descricao}</h4>
                                     <h1>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(account.valor)}</h1>
                                     <p>{account.data}</p>
                                   </div>
                                 ))}
-                                
+                                 */}
                             </div>
                         </div>
                     </BankPostBox>

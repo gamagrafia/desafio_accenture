@@ -1,4 +1,4 @@
-import { IUser } from './interfaces';
+import { IDataAccount, IUser } from './interfaces';
 import { Types } from './types';
 
 export const ActionsCreators  = {
@@ -14,6 +14,13 @@ export const ActionsCreators  = {
         type:Types.UPDATE_PASS,
         payload:{
             senha
+        }
+    }),
+
+    lancamento: (dataAccount: IDataAccount) => ({
+        type: Types.LANCAMENTOS,
+        payload:{
+            dataAccount
         }
     })
 

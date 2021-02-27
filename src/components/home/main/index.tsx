@@ -80,16 +80,15 @@ const Main: React.FC = () => {
           <Form onSubmit={createAccount}>
             <h4>
               Peça sua conta e cartão de crédito Gama Bank
-        </h4>
+            </h4>
             <input type="text" value={cpf} onChange={e => setCpf(e.target.value)} placeholder="Digite seu CPF" />
             <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="Nome completo" />
             <input type="text" value={userName} onChange={e => setUserName(e.target.value)} placeholder="Nome do usuário" />
             <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Digite sua senha" />
             <input type="password" value={confirmPass} onChange={e => setConfirmPass(e.target.value)} placeholder="Confirme sua senha" />
 
-            <Link to="/login">
-              <button>Continuar <img src={ArrowGray} alt="" /></button>
-            </Link>
+           <button>Continuar <img src={ArrowGray} alt="" /></button>
+            
           </Form>
         </SideRight>
       </SectionOne>
