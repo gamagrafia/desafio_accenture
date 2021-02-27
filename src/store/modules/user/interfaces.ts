@@ -3,6 +3,7 @@ export interface IToken {
     storage: string;
   }
 
+
 export interface IUser {  
     usuario :{
         cpf: string,

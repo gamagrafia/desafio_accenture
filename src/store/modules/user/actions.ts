@@ -1,47 +1,23 @@
 import { IUser } from './interfaces';
+import { Types } from './types';
 
-export function addNewUser(user: IUser) {
-    return {
-
-        type: 'USER_LOGIN',
+export const ActionsCreators  = {
+    
+    login: (user:IUser) => ({
+        type: Types.LOGIN,
         payload: {
-
-            usuario: {
-                nome: user.usuario.nome,
-                id: user.usuario.id,
-                login: user.usuario.login,
-                redefinirSenha: user.usuario.redefinirSenha,
-                senha: user.usuario.senha,
-                senhaTemporaria: user.usuario.senhaTemporaria
-            },
-            debit: {
-                descricao: user.conta.descricao,
-                id: user.conta.id,
-                numero: user.conta.numero,
-                saldo: user.conta.saldo,
-                tipo: user.conta.tipo,
-            },
-            credit: {
-                descricao: user.conta.descricao,
-                id: user.conta.id,
-                numero: user.conta.numero,
-                saldo: user.conta.saldo,
-                tipo: user.conta.tipo,
-            },
-            token: user.token,
-            dataFim:user.dataFim,
-            dataInicio: user.dataInicio
-            
-
-
-
-
+            user
         }
+    }),
 
+    update_pass: (senha:IUser) => ({
+        type:Types.UPDATE_PASS,
+        payload:{
+            senha
+        }
+    })
 
-
-    }
+       
 }
-
 
 

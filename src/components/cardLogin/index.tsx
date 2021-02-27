@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
 
 import api from '../../services/api';
-import { addNewUser } from '../../store/modules/user/actions';
+import { ActionsCreators } from '../../store/modules/user/actions';
 import { IToken } from '../../store/modules/user/interfaces';
 import { Container, LinkSections } from './style';
 
@@ -33,25 +33,42 @@ const CardLogin: React.FC = () => {
       localStorage.clear()
   }, [storage])
 
-  const handleLogin = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+
+
+  const handleLogin = (e:FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
 
     const loginData = {
       usuario: login,
       senha: password
     }
+    
+    try {
+
+      api.post('/login', loginData).then(
+        response => {
+          // console.log(response.data)
+          localStorage.setItem('@tokenApp', response.data.token);
+          alert('logado')
+          dispatch(ActionsCreators.login(response.data))
+         
+          history.push('/dashboard')
+        }
 
 
-    api.post('/login', loginData).then(
-      response => {
-        // console.log(response.data)
-        localStorage.setItem('@tokenApp', response.data.token);
-        alert('logado')
-        dispatch(addNewUser(response.data))
-        history.push('/dashboard')
-      }
+      ).catch(e => {
+        console.clear();
+        history.push('/error')
+      })
 
-    )
+    }catch (error){
+      console.log(error);
+    }
+  
+
+    
+
   }
 
   return (
