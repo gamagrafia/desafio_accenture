@@ -2,15 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { AiOutlineBank, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { GiWallet } from 'react-icons/gi';
 import { RiCloseLine, RiMoneyDollarCircleLine } from 'react-icons/ri';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 import logoDash from '../../img/logo-dash.svg';
-import { IUserState } from '../../store/modules/user/interfaces';
 import { BankPostBox, BoxAccount, DashContainer, MainContent, SideBar, SideBarButton } from './style';
 
 
-const Dashboard: React.FC = (props) => {
+const Dashboard: React.FC = () => {
 
     const history = useHistory();
     const dispatch = useDispatch();
@@ -24,15 +23,29 @@ const Dashboard: React.FC = (props) => {
 
     
   
-    const globalState = useSelector((state:IUserState) => state.users);
+   
     
     // console.log(globalState[0].usuario.nome);
+
+    // const token = localStorage.getItem('tokenApp');
+    
+    // if(!!token){
+    //     const globalState = useSelector((state:IUserState) => state.users);
+    //     var result = globalState[1].usuario;
+        
+    //     alert(result)
+    // }
+
+    
+    
+        
 
 
         
     return (
         <>  
             <DashContainer>
+               
                 
                 <SideBar>
                     <img src={logoDash} alt="Logo Dashboard" />

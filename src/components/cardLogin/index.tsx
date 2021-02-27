@@ -58,7 +58,7 @@ const CardLogin: React.FC = () => {
 
 
       ).catch(e => {
-        console.clear();
+        // console.clear();
         history.push('/error')
       })
 

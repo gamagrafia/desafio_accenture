@@ -5,7 +5,6 @@ import { useHistory } from 'react-router-dom';
 
 import { Container } from '../../components/cardLogin/style';
 import api from '../../services/api';
-import { ActionsCreators } from '../../store/modules/user/actions';
 import { ContainerPassRequest } from './style';
 
 // import { Container } from './styles';
@@ -48,7 +47,7 @@ const PassRequest: React.FC = () => {
             api.post("/nova-senha", dataRequest).then(
                 response => {
                     localStorage.setItem('@tempPass', response.data);
-                    dispatch(ActionsCreators.update_pass(response.data))
+                    // dispatch(ActionsCreators.update_pass(response.data))
                     alert('Sua senha foi enviada para o seu email, registre uma nova!');
                     setEmail("");
                     setLogin("");
