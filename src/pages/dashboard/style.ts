@@ -330,5 +330,12 @@ export const BankPostBox = styled.section`
     @media(max-width: 480px){
       
     }
+`
+export const BoxPlan = styled.section`
+    background-color: #fff;
+    border-radius: 10px;
+    width: 90%;
+    height: 100%;
+    padding: 30px;
 
 `

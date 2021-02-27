@@ -7,14 +7,13 @@ import { useHistory } from 'react-router-dom';
 
 import logoDash from '../../img/logo-dash.svg';
 import { IUserState } from '../../store/modules/user/interfaces';
-import { BankPostBox, BoxAccount, DashContainer, MainContent, SideBar, SideBarButton } from './style';
+import { BankPostBox, BoxAccount, BoxPlan, DashContainer, MainContent, SideBar, SideBarButton } from './style';
 
 
 const Dashboard: React.FC = () => {
 
     const history = useHistory();
     const dispatch = useDispatch();
-
     
     //Fechar tela e remover token
     function closeSession() {
@@ -40,6 +39,8 @@ const Dashboard: React.FC = () => {
                     <SideBarButton><AiOutlineBank size={35} />Planos</SideBarButton>
                     <SideBarButton><AiOutlineBank size={35} />Pagamentos</SideBarButton>
                     <SideBarButton><AiOutlineBank size={35} />Transações</SideBarButton>
+
+                    
                 </SideBar>
                 <MainContent>
                     <div>
@@ -89,6 +90,7 @@ const Dashboard: React.FC = () => {
                     </BankPostBox>
                 </MainContent>
             </DashContainer>
+
         </>
     );
 }
