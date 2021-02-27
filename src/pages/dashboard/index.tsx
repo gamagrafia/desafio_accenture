@@ -2,8 +2,10 @@ import React , { useEffect, useState} from 'react';
 import { AiOutlineBank, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { GiWallet } from 'react-icons/gi';
 import { RiCloseLine, RiMoneyDollarCircleLine } from 'react-icons/ri';
+//import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import logoDash from '../../img/logo-dash.svg';
+//import { IUserState } from '../../store/modules/user/interfaces';
 import { BankPostBox, BoxAccount, DashContainer, MainContent, SideBar, SideBarButton } from './style';
 import api from '../../services/api';
 import jwt_decote from 'jwt-decode';
@@ -26,11 +28,15 @@ interface IUser{
     }
   
   }
+const Dashboard: React.FC = (props) => {
 
-const Dashboard: React.FC = () => {
     const history = useHistory();
     const [ dataAccount, setDataAccount ] = useState<IDataAccount>();
 
+   // const dispatch = useDispatch();
+
+    
+    //Fechar tela e remover token
     function closeSession() {
         localStorage.clear();
         history.push('/')
@@ -72,6 +78,14 @@ const Dashboard: React.FC = () => {
         })
       }, [] )
 
+    
+  
+   // const globalState = useSelector((state:IUserState) => state.users);
+    
+    // console.log(globalState[0].usuario.nome);
+
+
+        
     return (
         <>  
             <DashContainer>
