@@ -43,16 +43,21 @@ const Dashboard: React.FC = () => {
           const TokenArr = TokenStorage.split(' ')
           const TokenDecode = TokenArr[1]
           const decoded = jwt_decote<IUser>(TokenDecode);
+          console.log(decoded.sub);
           return decoded.sub;
         } else {
           alert('err')
         }
+
       }
+      console.log(TokenDecodedValue);
 
     useEffect( () => {
         let storageToken = () => localStorage.getItem('@tokenApp');
-
-        api.get(`dashboard?fim=2021-01-31&inicio=2021-01-01&login=${TokenDecodedValue()}`, {
+        console.log(storageToken);
+        //dashboard?fim=2021-01-31&inicio=2021-01-01&login=${TokenDecodedValue()}
+        
+        api.get(`/dashboard?fim=2021-01-31&inicio=2021-01-31&login=${TokenDecodedValue()}`, {
           headers: {
             'Content-Type': 'application/json',
             'Authorization': storageToken()
@@ -120,8 +125,8 @@ const Dashboard: React.FC = () => {
                                 { dataAccount?.contaBanco.lancamentos.map( ( account: any, index: number ) => (
                                   <div key={index} className="lancamentos">
                                     <h4>{account.descricao}</h4>
-                                    <h1>{account.valor}</h1>
-                                    <p>{account.data}</p>
+                                    <h1>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(account.valor)}</h1>
+                                    <p>{account.data.substring(6)}</p>
                                   </div>
                                 ))}
                                 
@@ -133,7 +138,7 @@ const Dashboard: React.FC = () => {
                                 { dataAccount?.contaCredito.lancamentos.map( ( account: any, index: number ) => (
                                   <div key={index} className="lancamentos">
                                     <h4>{account.descricao}</h4>
-                                    <h1>{account.valor}</h1>
+                                    <h1>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(account.valor)}</h1>
                                     <p>{account.data}</p>
                                   </div>
                                 ))}
