@@ -87,9 +87,8 @@ const Main: React.FC = () => {
             <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Digite sua senha" />
             <input type="password" value={confirmPass} onChange={e => setConfirmPass(e.target.value)} placeholder="Confirme sua senha" />
 
-            <Link to="/login">
-              <button>Continuar <img src={ArrowGray} alt="" /></button>
-            </Link>
+            <button>Continuar <img src={ArrowGray} alt="" /></button>
+          
           </Form>
         </SideRight>
       </SectionOne>

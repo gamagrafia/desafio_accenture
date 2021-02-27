@@ -10,7 +10,7 @@ import { IUserState } from '../../store/modules/user/interfaces';
 import { BankPostBox, BoxAccount, DashContainer, MainContent, SideBar, SideBarButton } from './style';
 
 
-const Dashboard: React.FC = (props) => {
+const Dashboard: React.FC = () => {
 
     const history = useHistory();
     const dispatch = useDispatch();
@@ -24,7 +24,7 @@ const Dashboard: React.FC = (props) => {
 
     
   
-    const globalState = useSelector((state:IUserState) => state.users);
+  const globalState = useSelector((state:IUserState) => state.users); 
     
     // console.log(globalState[0].usuario.nome);
 
