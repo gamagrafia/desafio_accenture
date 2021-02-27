@@ -42,8 +42,28 @@ export const SideBar =  styled.aside`
     }
 
 `
-
 export const SideBarButton = styled.button`
+    width: 90px;
+    height: 90px;
+    margin-top: 40px;
+    color: #fff;
+    font-size: 0.8rem;
+    background-color: #8C52E5;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: space-between;
+    padding: 8px 8px ;
+    border-color: none;
+    box-shadow: inset -9px -8px 20px 8px #7030d2;
+    border: 0px solid #8C52E5; 
+    border-radius: 5px; 
+
+    
+`
+
+
+export const Button = styled.button`
     width: 90px;
     height: 90px;
     margin-top: 40px;
