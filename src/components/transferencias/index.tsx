@@ -2,7 +2,7 @@ import { useState, FormEvent, useEffect } from "react";
 import api from "../../services/api";
 import { Container, Forms } from "./style";
 
-const Depositos: React.FC = () => {
+const Transferencia: React.FC = () => {
   const [conta, setConta] = useState("");
   const [contaDestino, setContaDestino] = useState("");
   const [data, setData] = useState("");
@@ -13,11 +13,11 @@ const Depositos: React.FC = () => {
 
   function postPlanoConta(event: FormEvent<HTMLFormElement>) {}
 
-  function handleDeposito(event: FormEvent<HTMLFormElement>) {
+  function handleTransferencia(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     alert("OK");
 
-    const depositoData = {
+    const transferenciaData = {
       conta: parseInt(conta),
       contaDestino: login,
       data,
@@ -29,7 +29,7 @@ const Depositos: React.FC = () => {
 
     try {
       api
-        .post("/lancamentos", depositoData, {
+        .post("/lancamentos", transferenciaData, {
           headers: {
             "Content-Type": "application/json",
             Authorization: localStorage.getItem("@tokenApp"),
@@ -47,19 +47,19 @@ const Depositos: React.FC = () => {
   return (
     <>
       <Container>
-        <h1>Faça seu Depósito</h1>
+        <h1>Faça sua Transferencia</h1>
 
-        <Forms onSubmit={handleDeposito}>
+        <Forms onSubmit={handleTransferencia}>
           <input
             type="text"
-            placeholder="Digite o ID de sua conta"
+            placeholder="Digite o ID da conta que você quer enviar o dinheiro"
             value={conta}
             onChange={(e) => setConta(e.target.value)}
             required
           />
           <input
             type="text"
-            placeholder="Em qual conta quer inserir saldo?"
+            placeholder="Digite o ID da conta para qual você quer transferir o dinheiro?"
             value={contaDestino}
             onChange={(e) => setContaDestino(e.target.value)}
             required
@@ -108,4 +108,4 @@ const Depositos: React.FC = () => {
   );
 };
 
-export default Depositos;
+export default Transferencia;

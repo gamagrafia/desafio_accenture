@@ -6,6 +6,7 @@ import { useHistory } from 'react-router-dom';
 // import logoDash from '../../img/logo-dash.svg';
 import { BankPostBox, BoxAccount, DashContainer, MainContent, SideBar, SideBarButton } from './style';
 import Depositos from '../../components/deposito';
+import Transferencia from'../../components/transferencias';
 
 
 
@@ -15,21 +16,23 @@ const Dashboard: React.FC = () => {
     const history = useHistory();
 
    const [showDeposito, setShowDeposito] = useState(false)
+   const [showTransferencia, setShowTransferencia] = useState(false)
    const [ hidemainSection, setHideMainSection ] = useState(false)
     
 
 
 
-    function handleShow(){
+    function handleShowDeposito(){
         showDeposito ? setShowDeposito(false) : setShowDeposito(true)
         hidemainSection ? setHideMainSection(false) : setHideMainSection (true)
     }
-
-    function handleHide(){
-
+    
+    function handleShowTransferencia(){
+        
+        showTransferencia ? setShowTransferencia(false) : setShowTransferencia(true)
+        hidemainSection ? setHideMainSection(false) : setHideMainSection (true)
     }
-
-       
+ 
     function closeSession() {
         localStorage.clear();
         history.push('/')
@@ -42,9 +45,9 @@ const Dashboard: React.FC = () => {
                 
                 <SideBar>
                     {/* <img src={logoDash} alt="Logo Dashboard" /> */}
-                    <SideBarButton>
-                    <AiOutlineBank  onClick={handleShow} size={35} />  Depósitos    </SideBarButton>
-                    <SideBarButton  ><AiOutlineBank size={35} />Planos</SideBarButton>
+                    <SideBarButton onClick={handleShowDeposito}>
+                    <AiOutlineBank  size={35} />  Depósitos    </SideBarButton>
+                    <SideBarButton onClick={handleShowTransferencia}  ><AiOutlineBank size={35} />Transferir</SideBarButton>
                     <SideBarButton><AiOutlineBank size={35} />Pagamentos</SideBarButton>
                     <SideBarButton><AiOutlineBank size={35} />Transações</SideBarButton>
                 </SideBar>
@@ -54,8 +57,11 @@ const Dashboard: React.FC = () => {
                  { showDeposito === true &&
                     <Depositos/>
                  }
+                 { showTransferencia === true &&
+                    <Transferencia/>
+                 }
 
-                 { showDeposito === false &&
+                 { showDeposito || showTransferencia === false &&
                  <>
                     <div>
                     <h2>Olá , seja bem vindo!</h2><RiCloseLine onClick={closeSession} size={40} />
