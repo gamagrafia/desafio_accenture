@@ -1,14 +1,14 @@
 #  GAMA BANK 
 <p>Projeto desenvolvido por Alitsa Virgínia, Claudia Leite, Caroline Casagrande, Flávio Gama. Com intuito de mostrar nosso conhecimento e todo aprendizado que tivemos ao decorrer de um mês na Gama Academy. </p> 
 
-* HOME 
+*  HOME
     ![home1](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home1.PNG)
     ![home2](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home2.PNG)
     ![home3](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home3.PNG)
     ![home4](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home4.PNG)
-    ![home5](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home5.PNG)    
+    ![home5](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home5.PNG)
 * LOGIN 
-   ![Login](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Login.PNG)
+    ![Login](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Login.PNG)
 * SENHA  
     ![Recovery](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/recoveryPassRead.PNG)
 * ERRO
