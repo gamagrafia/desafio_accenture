@@ -97,6 +97,11 @@ export const MainContent = styled.main`
     align-items: flex-start;
     justify-content: flex-start;
 
+    h1{
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
     svg {
         cursor:pointer;
     }
@@ -105,6 +110,7 @@ export const MainContent = styled.main`
         width: 100%;
         color: #fff;
         margin-bottom: 40px;
+
         
         
     }
