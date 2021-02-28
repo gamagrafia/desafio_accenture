@@ -1,7 +1,7 @@
 #  GAMA BANK 
 <p>Projeto desenvolvido por Alitsa Virgínia, Claudia Leite, Caroline Casagrande, Flávio Gama. Com intuito de mostrar nosso conhecimento e todo aprendizado que tivemos ao decorrer de um mês na Gama Academy. </p> 
 
-*  HOME
+* HOME
     ![home1](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home1.PNG)
     ![home2](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home2.PNG)
     ![home3](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home3.PNG)
@@ -9,10 +9,10 @@
     ![home5](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home5.PNG)
 * LOGIN 
     ![Login](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Login.PNG)
+* SENHA  
+    ![Recovery](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/recoveryPassRead.PNG)
 * ERRO
    ![Erro](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/ErrorRead.PNG)
-* ALTERAR SENHA  
-    ![Recovery](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/recoveryPassRead.PNG)
 * ESQUECI SENHA 
     ![PassRead](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/recoveryPassRead.PNG)
 * DASBOARD
@@ -62,7 +62,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [TypeScript](https://www.typescriptlang.org/)
 - [style-componts](https://styled-components.com/)
 - [Jest](https://jestjs.io/)
-- [Axios](Consumo da API)
+- [Axios](https://www.npmjs.com/package/axios)
 
 
 ### 🔄 Rodando a aplicação web (Front End)
@@ -78,33 +78,21 @@ $ npm install ou yarn install
 #### Execute a aplicação em modo de desenvolvimento
 $ npm run start ou yarn start 
 
-#### A aplicação será aberta na porta:3000 - acesse http://localhost:3000
+#### A aplicação será aberta na porta:3000 - acesse: http://localhost:3000
 
 
 ### Autores
 
- <a href="https://www.linkedin.com/in/alitsavirginia/">
- ![alitsa](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Alitsa.jpeg)
- </br>
- <sub><b>Alitsa Virginia</b></sub></a> <a title="GAMA ACADEMY"> 🚀</a>
- 
- <a href="https://www.linkedin.com/in/claudialeite-dev/">
- </br>
- ![Claudia](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Claudia.jpeg)
- <sub><b>Claudia Leite</b></sub></a> <a title="GAMA ACADEMY">🚀</a>
-
- <a href="https://www.linkedin.com/in/carolinecasagrande/">
- </br>
- ![Caroline](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Carol.jpeg)
- <sub><b>Caroline Casagrande</b></sub></a> <a title="GAMA ACADEMY">🚀</a>
-
- <a href="https://www.linkedin.com/in/flavio-gama-b206243a/">
- </br>
- ![Flavio](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Flavio.jpeg)
- <sub><b>Flavio Gama</b></sub></a> <a title="GAMA ACADEMY">🚀</a>
-
+<h3 align="center">
+Feito com 💜 por 
+<a href="https://www.linkedin.com/in/alitsavirginia/">Alitsa Virginia, 
+<a href="https://www.linkedin.com/in/claudialeite-dev/">Claudia Leite,
+<a href="https://www.linkedin.com/in/carolinecasagrande/">Caroline Casagrande,
+<a href="https://www.linkedin.com/in/flavio-gama-b206243a/">Flavio Gama.
+</a>
+<br><br>
 
 <h4 align="center"> 
-	 GamaBank 🚀 Concluido... 
+	 GamaBank 🚀 Concluído... 
 </h4>
 
