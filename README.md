@@ -2,15 +2,16 @@
 <p>Projeto desenvolvido por Alitsa Virgínia, Claudia Leite, Caroline Casagrande, Flávio Gama. Com intuito de mostrar nosso conhecimento e todo aprendizado que tivemos ao decorrer de um mês na Gama Academy. </p> 
 
 <h1 align="center">
-    <img alt="GAMABANK-Home" title="#Home" src="./img/Home1.jpg" width="50px"/>
-    <img alt="GAMABANK-Home" title="#Home" src="./img/Home2.jpg" width="50px"/>
-    <img alt="GAMABANK-Home" title="#Home" src="./img/Home3.jpg" width="50px" />
-    <img alt="GAMABANK-Home" title="#Home" src="./img/Home4.jpg" widht="50px"/>
-    <img alt="GAMABANK-Home" title="#Home" src="./img/Home5.jpg" widht="50px"/>
-    <img alt="GAMABANK-Login" title="#Login" src="./img/loginR.jpg" widht="50px" />
-    <img alt="GAMABANK-Senha" title="#Senha" src="./img/senhaR.jpg" widht="50px" />
-    <img alt="GAMABANK-Erro" title="#Erro" src="./img/ErroR.jpg"  widht="50px"/>
-    <img alt="GAMABANK-Dashboard" title="#Dashboard" src="./img/DasR.jpg" widht="50px" />
+	![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home1.PNG)
+	![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home2.PNG)
+	![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home3.PNG)
+	![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home4.PNG)
+	![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home5.PNG)
+        ![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Login.PNG)
+        ![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/recoveryPassRead.PNG)
+        ![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/ErrorRead.PNG)
+        ![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/recoveryPassRead.PNG)
+        ![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/DashRead.PNG)
 </h1>
 
 ### 📑 SOBRE
@@ -21,7 +22,7 @@
 
 ### 📌 Mindmap
 <h1 align="center">
-    <img alt="Mindmap" title="#Mindmap" src="./img/Mindmap.jpg"  width=50px/>
+	![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/mindmapAccventure.png)
 </h1>
 
 ### ✅ Features
