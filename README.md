@@ -2,15 +2,15 @@
 <p>Projeto desenvolvido por Alitsa Virgínia, Claudia Leite, Caroline Casagrande, Flávio Gama. Com intuito de mostrar nosso conhecimento e todo aprendizado que tivemos ao decorrer de um mês na Gama Academy. </p> 
 
 <h1 align="center">
-    <img alt="GAMABANK-Home" title="#Home" src="./img/Home1.jpg" width="50"/>
-    <img alt="GAMABANK-Home" title="#Home" src="./img/Home2.jpg" width="50"/>
-    <img alt="GAMABANK-Home" title="#Home" src="./img/Home3.jpg" width=50 />
-    <img alt="GAMABANK-Home" title="#Home" src="./img/Home4.jpg" widht=50/>
-    <img alt="GAMABANK-Home" title="#Home" src="./img/Home5.jpg" widht=50/>
-    <img alt="GAMABANK-Login" title="#Login" src="./img/loginR.jpg" widht=50 />
-    <img alt="GAMABANK-Senha" title="#Senha" src="./img/senhaR.jpg" widht=50 />
-    <img alt="GAMABANK-Erro" title="#Erro" src="./img/ErroR.jpg"  widht=50/>
-    <img alt="GAMABANK-Dashboard" title="#Dashboard" src="./img/DasR.jpg" widht=50 />
+    <img alt="GAMABANK-Home" title="#Home" src="./img/Home1.jpg" width="50px"/>
+    <img alt="GAMABANK-Home" title="#Home" src="./img/Home2.jpg" width="50px"/>
+    <img alt="GAMABANK-Home" title="#Home" src="./img/Home3.jpg" width="50px" />
+    <img alt="GAMABANK-Home" title="#Home" src="./img/Home4.jpg" widht="50px"/>
+    <img alt="GAMABANK-Home" title="#Home" src="./img/Home5.jpg" widht="50px"/>
+    <img alt="GAMABANK-Login" title="#Login" src="./img/loginR.jpg" widht="50px" />
+    <img alt="GAMABANK-Senha" title="#Senha" src="./img/senhaR.jpg" widht="50px" />
+    <img alt="GAMABANK-Erro" title="#Erro" src="./img/ErroR.jpg"  widht="50px"/>
+    <img alt="GAMABANK-Dashboard" title="#Dashboard" src="./img/DasR.jpg" widht="50px" />
 </h1>
 
 # 📑 SOBRE
@@ -21,7 +21,7 @@
 
 # 📌 Mindmap
 <h1 align="center">
-    <img alt="Mindmap" title="#Mindmap" src="./img/Mindmap.jpg" />
+    <img alt="Mindmap" title="#Mindmap" src="./img/Mindmap.jpg"  width=50px/>
 </h1>
 
 ### ✅ Features
@@ -76,19 +76,19 @@ $ npm run start ou yarn start
 # Autores
 
  <a href="https://www.linkedin.com/in/alitsavirginia/">
- <img style="border-radius: 50%;" src="./img/alitsa.jpg" width="50" alt="alitsa"/>
+ <img style="border-radius: 50%;" src="./img/alitsa.jpg" width="100px" alt="alitsa"/>
  <sub><b>Alitsa Virginia</b></sub></a> <a title="GAMA ACADEMY"> 🚀</a>
  
  <a href="https://www.linkedin.com/in/claudialeite-dev/">
- <img style="border-radius: 50%;" src="./img/claudia.jpg" width="50" alt="claudia"/>
+ <img style="border-radius: 50%;" src="./img/claudia.jpg" width="100px" alt="claudia"/>
  <sub><b>Claudia Leite</b></sub></a> <a title="GAMA ACADEMY">🚀</a>
 
  <a href="https://www.linkedin.com/in/carolinecasagrande/">
- <img style="border-radius: 50%;" src="./img/carol.jpg" width="50" alt="Caroline"/>
+ <img style="border-radius: 50%;" src="./img/carol.jpg" width="100px" alt="Caroline"/>
  <sub><b>Caroline Casagrande</b></sub></a> <a title="GAMA ACADEMY">🚀</a>
 
  <a href="https://www.linkedin.com/in/flavio-gama-b206243a/">
- <img style="border-radius: 50%;" src="./img/flavio.jpg" width="50" alt="Flavio"/>
+ <img style="border-radius: 50%;" src="./img/flavio.jpg" width="100px" alt="Flavio"/>
  <sub><b>Flavio Gama</b></sub></a> <a title="GAMA ACADEMY">🚀</a>
 
 
