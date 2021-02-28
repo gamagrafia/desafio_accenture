@@ -1,7 +1,7 @@
 #  GAMA BANK 
 <p>Projeto desenvolvido por Alitsa Virgínia, Claudia Leite, Caroline Casagrande, Flávio Gama. Com intuito de mostrar nosso conhecimento e todo aprendizado que tivemos ao decorrer de um mês na Gama Academy. </p> 
 
-<h1 align="center">
+
 	![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home1.PNG)
 	![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home2.PNG)
 	![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home3.PNG)
@@ -12,7 +12,6 @@
     ![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/ErrorRead.PNG)
     ![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/recoveryPassRead.PNG)
     ![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/DashRead.PNG)
-</h1>
 
 
 ### 📑 SOBRE
@@ -22,9 +21,8 @@
  <p>O GamaBank ele tem como objetivo trazer uma melhor expêriencia para os nossos clientes e mais agilidade ao acesso das inforações referente à sua conta. Trazendo segurança e comodidade. </p>
 
 ### 📌 Mindmap
-<h1 align="center">
 	![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/mindmapAccventure.png)
-</h1>
+
 
 
 ### ✅ Features
