@@ -1,6 +1,6 @@
 import React, { FormEvent, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-
+import {toast} from  'react-toastify';
 import Logo from '../../components/logo';
 import ArrowWhite from '../../img/arrowwhite.png';
 import api from '../../services/api';
@@ -36,7 +36,7 @@ const RecoveryPass: React.FC = () => {
         }
       ).catch((e) => {
         console.clear()
-        alert("Algo esta errado, tente novamente")
+        toast.error("Algo esta errado, tente novamente")
         setLogin('')
         setSenha('')
         setSenhaConf('')

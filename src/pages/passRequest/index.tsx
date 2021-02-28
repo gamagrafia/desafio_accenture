@@ -2,7 +2,7 @@ import React, { FormEvent, useEffect, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-
+import {toast} from 'react-toastify';
 import { Container } from '../../components/cardLogin/style';
 import api from '../../services/api';
 import { ActionsCreators } from '../../store/modules/user/actions';
@@ -49,7 +49,7 @@ const PassRequest: React.FC = () => {
                 response => {
                     localStorage.setItem('@tempPass', response.data);
                     dispatch(ActionsCreators.update_pass(response.data))
-                    alert('Sua senha foi enviada para o seu email, registre uma nova!');
+                    toast.success('Sua senha foi enviada para o seu email, registre uma nova!');
                     setEmail("");
                     setLogin("");
 
