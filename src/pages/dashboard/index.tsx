@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { AiOutlineBank, AiOutlineEyeInvisible } from 'react-icons/ai';
-import { GiWallet } from 'react-icons/gi';
-import { RiCloseLine, RiMoneyDollarCircleLine } from 'react-icons/ri';
+import { AiOutlineBank } from 'react-icons/ai';
+import { BiExit } from 'react-icons/bi';
+import { GiExitDoor, GiWallet } from 'react-icons/gi';
+import { RiMoneyDollarCircleLine } from 'react-icons/ri';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
@@ -14,50 +15,27 @@ const Dashboard: React.FC = () => {
     const history = useHistory();
     const dispatch = useDispatch();
 
-    
-    //Fechar tela e remover token
+    const login = localStorage.getItem("@login");
+   
     function closeSession() {
         localStorage.clear();
         history.push('/')
     }
-
-    
-  
    
-    
-    // console.log(globalState[0].usuario.nome);
-
-    // const token = localStorage.getItem('tokenApp');
-    
-    // if(!!token){
-    //     const globalState = useSelector((state:IUserState) => state.users);
-    //     var result = globalState[1].usuario;
-        
-    //     alert(result)
-    // }
-
-    
-    
-        
-
-
-        
     return (
         <>  
             <DashContainer>
-               
-                
+                              
                 <SideBar>
                     <img src={logoDash} alt="Logo Dashboard" />
                     <SideBarButton><AiOutlineBank size={35} />Depósitos</SideBarButton>
                     <SideBarButton><AiOutlineBank size={35} />Planos</SideBarButton>
-                    <SideBarButton><AiOutlineBank size={35} />Pagamentos</SideBarButton>
                     <SideBarButton><AiOutlineBank size={35} />Transações</SideBarButton>
+                    <GiExitDoor className="icon-exit" onClick={closeSession} size={50} color=" #000"  />
                 </SideBar>
                 <MainContent>
                     <div>
-                        <h2>Olá , seja bem vindo!</h2><RiCloseLine onClick={closeSession} size={40} />
-                        <AiOutlineEyeInvisible color=" #68DE5A" size={40} />
+                        <h2>Olá <span>{login}</span>, seja bem vindo!</h2><BiExit onClick={closeSession} size={40} color=" #68DE5A"  />
                     </div>
                     
                     <div>
@@ -66,10 +44,7 @@ const Dashboard: React.FC = () => {
                             </div>
                             <p>Saldo Disponivel</p>
                             <h1 className="dash_balance_acc">R$8.000,00</h1>
-                            <div>
-                                <h4>Transacoes</h4>
-                                <h1>R$2.000,00</h1>
-                            </div>
+                           
 
                         </BoxAccount>
 
@@ -78,10 +53,7 @@ const Dashboard: React.FC = () => {
                             </div>
                             <p>Saldo Disponivel</p>
                             <h1 className="dash_balance_acc_credit">R$8.000,00</h1>
-                            <div>
-                                <h4>Transacoes</h4>
-                                <h1>R$2.000,00</h1>
-                            </div>
+                            
 
                         </BoxAccount>
                     </div>

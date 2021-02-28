@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 import { Container } from '../../components/cardLogin/style';
+import Logo from '../../components/logo';
 import api from '../../services/api';
 import { ContainerPassRequest } from './style';
 
@@ -63,9 +64,10 @@ const PassRequest: React.FC = () => {
 
     return (
         <ContainerPassRequest>
+            <Logo />
             <Container>
                 <form onSubmit={handlePassRequest}>
-                    <h1>Solicitar nova Senhaclear</h1>
+                    <h1>Solicitar nova Senha</h1>
                     <input type="email" placeholder="Digite o seu email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                     <input type="text" placeholder="Digite seu nome de usuário" value={login} onChange={(e) => setLogin(e.target.value)} required />
                     <button type="submit">

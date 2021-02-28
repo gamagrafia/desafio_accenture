@@ -26,16 +26,35 @@ export const SideBar =  styled.aside`
     align-items: center;
     padding: 20px;
 
+    .icon-exit{
+        display:none;
+    }
+
     @media(max-width: 1301px){
         width:15%;
     }
     @media(max-width: 1024px){
         width: 17%;
         position: fixed;
+        .icon-exit {
+            margin-top: 40px;
+            cursor: pointer;
+            display: block;
+        }
     }
     @media(max-width: 768px){
         width: 25%;
         position: fixed;
+
+        .icon-exit {
+            margin-top: 40px;
+            cursor: pointer;
+            display: block;
+
+            
+
+        }
+
     }
     @media(max-width: 480px){
       
@@ -60,11 +79,17 @@ export const SideBarButton = styled.button`
     border: 0px solid #8C52E5; 
     border-radius: 5px; 
 
+    :hover{
+        background-color:#9a84bd;
+
+    }
+    
+
     
 `
 
 export const MainContent = styled.main`
-    width: 80%;
+    width: 90%;
     height: 100%;
     padding: 70px 100px;
     display: flex;
@@ -87,6 +112,16 @@ export const MainContent = styled.main`
         width:90%;
         display:flex;
         justify-content: space-between;
+        h2{
+            font-size: 1.8rem; 
+            span{
+                color:#68DE5A;
+                text-transform:capitalize;
+
+            }
+        }
+
+       
     }
     
         @media(max-width: 1301px){
@@ -137,6 +172,7 @@ export const BoxAccount = styled.section`
     padding: 30px 15px ;
     display: flex;
     flex-direction:column;
+    align-items:center;
     border-radius: 8px;
     margin-bottom: 40px;
 

@@ -7,7 +7,12 @@ export const LogoImg = styled.img`
     left: 73px;
     top: 64px;
 
-   
+    @media (max-width: 750px){
+        width:210px;
+        height: 51px;
+        left: 60px;
+        top: 80px
+    }
     @media(max-width: 480px){
         width:130px;
         height: 31px;

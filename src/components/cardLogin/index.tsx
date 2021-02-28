@@ -50,6 +50,7 @@ const CardLogin: React.FC = () => {
         response => {
           // console.log(response.data)
           localStorage.setItem('@tokenApp', response.data.token);
+          localStorage.setItem('@login', login);
           alert('logado')
           dispatch(ActionsCreators.login(response.data))
          
