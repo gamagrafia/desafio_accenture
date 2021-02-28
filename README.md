@@ -83,26 +83,14 @@ $ npm run start ou yarn start
 
 ### Autores
 
- <a href="https://www.linkedin.com/in/alitsavirginia/">
- ![alitsa](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Alitsa.jpeg)
- </br>
- <sub><b>Alitsa Virginia</b></sub></a> <a title="GAMA ACADEMY"> 🚀</a>
- 
- <a href="https://www.linkedin.com/in/claudialeite-dev/">
- </br>
- ![Claudia](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Claudia.jpeg)
- <sub><b>Claudia Leite</b></sub></a> <a title="GAMA ACADEMY">🚀</a>
-
- <a href="https://www.linkedin.com/in/carolinecasagrande/">
- </br>
- ![Caroline](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Carol.jpeg)
- <sub><b>Caroline Casagrande</b></sub></a> <a title="GAMA ACADEMY">🚀</a>
-
- <a href="https://www.linkedin.com/in/flavio-gama-b206243a/">
- </br>
- ![Flavio](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Flavio.jpeg)
- <sub><b>Flavio Gama</b></sub></a> <a title="GAMA ACADEMY">🚀</a>
-
+<h3 align="center">
+Feito com ❤️ por 
+<a href="https://www.linkedin.com/in/alitsavirginia/">Alitsa Virginia 
+<a href="https://www.linkedin.com/in/claudialeite-dev/">Claudia Leite
+<a href="https://www.linkedin.com/in/carolinecasagrande/">Caroline Casagrande
+<a href="https://www.linkedin.com/in/flavio-gama-b206243a/">Flavio Gama
+</a>
+<br><br>
 
 <h4 align="center"> 
 	 GamaBank 🚀 Concluido... 
