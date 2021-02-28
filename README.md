@@ -6,20 +6,15 @@
     ![home2](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home2.PNG)
     ![home3](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home3.PNG)
     ![home4](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home4.PNG)
-    ![home5](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home5.PNG)
-    
+    ![home5](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home5.PNG)    
 * LOGIN 
    ![Login](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Login.PNG)
-
 * SENHA  
     ![Recovery](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/recoveryPassRead.PNG)
-
 * ERRO
    ![Erro](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/ErrorRead.PNG)
-
 * ESQUECI SENHA 
     ![PassRead](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/recoveryPassRead.PNG)
-
 * DASBOARD
     ![DashRead](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/DashRead.PNG)
 
