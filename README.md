@@ -78,7 +78,7 @@ $ npm run start ou yarn start
 
 ### Autores
 
-<<<<<<< HEAD
+######################################<<<<<<< HEAD
  <a href="https://www.linkedin.com/in/alitsavirginia/">
  ![alitsa](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Alitsa.jpeg)
  </br>
