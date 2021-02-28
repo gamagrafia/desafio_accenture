@@ -13,7 +13,7 @@
    ![Erro](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/ErrorRead.PNG)
 * ESQUECI SENHA 
     ![PassRead](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/recoveryPassRead.PNG)
-* DASBOARD
+* DASHBOARD
     ![DashRead](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/DashRead.PNG)
 
 
