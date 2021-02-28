@@ -1,21 +1,21 @@
 #  GAMA BANK 
 <p>Projeto desenvolvido por Alitsa Virgínia, Claudia Leite, Caroline Casagrande, Flávio Gama. Com intuito de mostrar nosso conhecimento e todo aprendizado que tivemos ao decorrer de um mês na Gama Academy. </p> 
 
-* Página HOME
+*  HOME
     ![home1](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home1.PNG)
     ![home2](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home2.PNG)
     ![home3](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home3.PNG)
     ![home4](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home4.PNG)
     ![home5](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home5.PNG)
-* Página Login 
+* LOGIN 
     ![Login](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Login.PNG)
-* Página Alterar Senha 
+* ERRO
+   ![Erro](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/ErrorRead.PNG)
+* ALTERAR SENHA  
     ![Recovery](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/recoveryPassRead.PNG)
-*Página Erro
-    ![Erro](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/ErrorRead.PNG)
-* Dasboard
+* ESQUECI SENHA 
     ![PassRead](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/recoveryPassRead.PNG)
-* Dasboard
+* DASBOARD
     ![DashRead](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/DashRead.PNG)
 
 
@@ -26,9 +26,9 @@
  <p>O GamaBank ele tem como objetivo trazer uma melhor expêriencia para os nossos clientes e mais agilidade ao acesso das inforações referente à sua conta. Trazendo segurança e comodidade. </p>
 
 ### 📌 Mindmap
-<<<<<<< HEAD
+
+* Mindmap
 	![Mindmap](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/mindmapAccventure.png)
-=======
 
 
 ### ✅ Features
@@ -83,7 +83,6 @@ $ npm run start ou yarn start
 
 ### Autores
 
-<<<<<<< HEAD
  <a href="https://www.linkedin.com/in/alitsavirginia/">
  ![alitsa](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Alitsa.jpeg)
  </br>
