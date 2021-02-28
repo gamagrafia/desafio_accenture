@@ -11,7 +11,7 @@ const Depositos: React.FC = () => {
   const [planoConta, setPlanoconta] = useState("");
   const [valor, setValor] = useState("");
 
-  function postPlanoConta(event: FormEvent<HTMLFormElement>) {}
+
 
   function handleDeposito(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -19,7 +19,7 @@ const Depositos: React.FC = () => {
 
     const depositoData = {
       conta: parseInt(conta),
-      contaDestino: login,
+      // contaDestino: login,
       data,
       descricao,
       login,
@@ -32,7 +32,7 @@ const Depositos: React.FC = () => {
         .post("/lancamentos", depositoData, {
           headers: {
             "Content-Type": "application/json",
-            Authorization: localStorage.getItem("@tokenApp"),
+            "Authorization": localStorage.getItem("@tokenApp"),
           },
         })
         .then((response) => {
@@ -50,6 +50,7 @@ const Depositos: React.FC = () => {
         <h1>Faça seu Depósito</h1>
 
         <Forms onSubmit={handleDeposito}>
+          
           <input
             type="text"
             placeholder="Digite o ID de sua conta"
@@ -57,13 +58,13 @@ const Depositos: React.FC = () => {
             onChange={(e) => setConta(e.target.value)}
             required
           />
-          <input
+          {/* <input
             type="text"
             placeholder="Em qual conta quer inserir saldo?"
             value={contaDestino}
             onChange={(e) => setContaDestino(e.target.value)}
             required
-          />
+          /> */}
           <input
             type="text"
             placeholder="Digite a Data do depósito"
@@ -71,8 +72,9 @@ const Depositos: React.FC = () => {
             required
           />
           <textarea
-            placeholder="Descrição do Depósito"
+            
             value={descricao}
+            placeholder="Descreva aqui o seu Depósito"
             onChange={(e) => setDescricao(e.target.value)}
             required
           />
@@ -100,7 +102,7 @@ const Depositos: React.FC = () => {
             onChange={(e) => setValor(e.target.value)}
             required
           />
-
+          
           <button type="submit">Continuar</button>
         </Forms>
       </Container>

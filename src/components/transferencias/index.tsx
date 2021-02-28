@@ -17,6 +17,9 @@ const Transferencia: React.FC = () => {
     event.preventDefault();
     ;
 
+    
+    data.split('/').reverse().join('-')
+
     const transferenciaData = {
       conta,
       contaDestino,
@@ -46,8 +49,9 @@ const Transferencia: React.FC = () => {
 
   return (
     <>
+      
       <Container>
-        <h1>Faça sua Transferencia</h1>
+      <h1>Faça sua Transferencia</h1> 
 
         <Forms onSubmit={handleTransferencia}>
           <input

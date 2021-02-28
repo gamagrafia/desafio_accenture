@@ -7,6 +7,7 @@ import { useHistory } from 'react-router-dom';
 import { BankPostBox, BoxAccount, DashContainer, MainContent, SideBar, SideBarButton } from './style';
 import Depositos from '../../components/deposito';
 import Transferencia from'../../components/transferencias';
+import Planos from '../../components/listadePlanos/index';
 
 
 
@@ -17,6 +18,7 @@ const Dashboard: React.FC = () => {
 
    const [showDeposito, setShowDeposito] = useState(false)
    const [showTransferencia, setShowTransferencia] = useState(false)
+   const [showPlanos, setShowPlanos] = useState(false)
    const [ hidemainSection, setHideMainSection ] = useState(false)
     
 
@@ -30,6 +32,12 @@ const Dashboard: React.FC = () => {
     function handleShowTransferencia(){
         
         showTransferencia ? setShowTransferencia(false) : setShowTransferencia(true)
+        hidemainSection ? setHideMainSection(false) : setHideMainSection (true)
+    }
+
+    function handleShowPlanos(){
+        
+        showPlanos ? setShowPlanos(false) : setShowPlanos(true)
         hidemainSection ? setHideMainSection(false) : setHideMainSection (true)
     }
  
@@ -48,7 +56,7 @@ const Dashboard: React.FC = () => {
                     <SideBarButton onClick={handleShowDeposito}>
                     <AiOutlineBank  size={35} />  Depósitos    </SideBarButton>
                     <SideBarButton onClick={handleShowTransferencia}  ><AiOutlineBank size={35} />Transferir</SideBarButton>
-                    <SideBarButton><AiOutlineBank size={35} />Pagamentos</SideBarButton>
+                    <SideBarButton onClick={handleShowPlanos}><AiOutlineBank size={35} />Planos</SideBarButton>
                     <SideBarButton><AiOutlineBank size={35} />Transações</SideBarButton>
                 </SideBar>
 
@@ -59,6 +67,10 @@ const Dashboard: React.FC = () => {
                  }
                  { showTransferencia === true &&
                     <Transferencia/>
+                 }
+
+                { showPlanos === true &&
+                    <Planos/>
                  }
 
                  { showDeposito || showTransferencia === false &&
