@@ -35,23 +35,23 @@
 
 Funcionalidades:
 
-[✔]-Cadastro de usuários;
-[✔]-Controle de sessão (Login);
-[✔]-Cadastro de planos de conta;
-[✔]-Listar planos de conta;
-[✔]-Depósitos e transferências;
-[✔]-Atualização de saldo;
-[✔]-Consultas de lançamentos por datas (extrato);
+-[✔]-Cadastro de usuários;
+-[✔]-Controle de sessão (Login);
+-[✔]-Cadastro de planos de conta;
+-[✔]-Listar planos de conta;
+-[✔]-Depósitos e transferências;
+-[✔]-Atualização de saldo;
+-[✔]-Consultas de lançamentos por datas (extrato);
 
 Obrigatório:
 
-[✔]-Styled Components ou SCSS;
-[✔]-Ser responsivo;
-[✔]-Uso de arquitetura FLUX com o react-redux;
-[✔]-Uso de localstorage ou cookies;
-[✔]-Controle de rotas públicas e privadas;
-[✔]-Fazer uso de Hooks;
-[✔]-Consumir API e fazer controle de sessão conforme as funcionalidades descritas acima;
+-[✔]-Styled Components ou SCSS;
+-[✔]-Ser responsivo;
+-[✔]-Uso de arquitetura FLUX com o react-redux;
+-[✔]-Uso de localstorage ou cookies;
+-[✔]-Controle de rotas públicas e privadas;
+-[✔]-Fazer uso de Hooks;
+-[✔]-Consumir API e fazer controle de sessão conforme as funcionalidades descritas acima;
 
 ### 🔨 Tecnologias
 
