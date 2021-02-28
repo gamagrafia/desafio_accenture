@@ -15,15 +15,15 @@ const Transferencia: React.FC = () => {
 
   function handleTransferencia(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    alert("OK");
+    ;
 
     const transferenciaData = {
-      conta: parseInt(conta),
-      contaDestino: login,
+      conta,
+      contaDestino,
       data,
       descricao,
       login,
-      planoConta: parseInt(planoConta),
+      planoConta,
       valor,
     };
 
@@ -32,7 +32,7 @@ const Transferencia: React.FC = () => {
         .post("/lancamentos", transferenciaData, {
           headers: {
             "Content-Type": "application/json",
-            Authorization: localStorage.getItem("@tokenApp"),
+            "Authorization": localStorage.getItem("@tokenApp"),
           },
         })
         .then((response) => {
@@ -40,7 +40,7 @@ const Transferencia: React.FC = () => {
         })
         .catch((e) => {});
     } catch (e) {
-      alert(e.message);
+      
     }
   }
 
@@ -66,6 +66,7 @@ const Transferencia: React.FC = () => {
           />
           <input
             type="text"
+            value={data}
             placeholder="Digite a Data do depósito"
             onChange={(e) => setData(e.target.value)}
             required
