@@ -78,7 +78,7 @@ $ npm install ou yarn install
 #### Execute a aplicação em modo de desenvolvimento
 $ npm run start ou yarn start 
 
-#### A aplicação será aberta na porta:3000 - acesse http://localhost:3000
+#### A aplicação será aberta na porta:3000 - acesse: http://localhost:3000
 
 
 ### Autores
@@ -88,11 +88,11 @@ Feito com 💜 por
 <a href="https://www.linkedin.com/in/alitsavirginia/">Alitsa Virginia, 
 <a href="https://www.linkedin.com/in/claudialeite-dev/">Claudia Leite,
 <a href="https://www.linkedin.com/in/carolinecasagrande/">Caroline Casagrande,
-<a href="https://www.linkedin.com/in/flavio-gama-b206243a/">Flavio Gama,
+<a href="https://www.linkedin.com/in/flavio-gama-b206243a/">Flavio Gama.
 </a>
 <br><br>
 
 <h4 align="center"> 
-	 GamaBank 🚀 Concluido... 
+	 GamaBank 🚀 Concluído... 
 </h4>
 
