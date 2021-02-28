@@ -43,7 +43,6 @@ const Main: React.FC = () => {
         }
       ).catch((e) => {
         if (e.response.status === 400) {
-          // console.clear();
           alert(`Usuario: ${userName} ja esta sendo usado! Tente outro.`)
         } else {
           alert(`Error message: ${e.message}`)

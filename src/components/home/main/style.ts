@@ -5,17 +5,18 @@ import backgroundImg from '../../../img/happyhome.png';
 export const Container = styled.div`
     background-color: #8C52E5;    
     width:100%;
-    //height: 100vh;
+
     
 `
 
 export const Header = styled.div`
-    height: 10vh;
+  
     img{
         padding: 40px;
     }
-    @media(max-width: 700px){        
-        width:100vw;
+    @media(max-width: 1024px){  
+        height:100px;      
+        width:100%;
         display: flex;
         justify-content: center;
         align-items:center;
@@ -26,7 +27,6 @@ export const Header = styled.div`
 export const SectionOne = styled.section`
     padding: 0 135px 0 180px;
     
-    //width:100vw;
     background-image: url(${backgroundImg});
     background-repeat: no-repeat;
     background-position: bottom;
@@ -37,11 +37,18 @@ export const SectionOne = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @media(max-width: 700px){
-        flex-wrap: wrap;
-        justify-content:center;
+    @media(max-width: 1024px){
+        width:100;
+        height:900px;
         background-image: unset;
         padding:0;
+        flex-direction: column;
+        justify-content:center;
+        Form{
+            margin-top:40px;
+        }
+        
+        
     }
     
 `
@@ -64,7 +71,6 @@ export const SideLeft = styled.div`
         border-radius: 20px;
         padding: 12px 21px;
         width: 250px;
-        //height:
         text-align: left;
         transition: 0.5s;
         color: #8C52E5;
@@ -137,7 +143,7 @@ export const Form = styled.form`
             width:16px;
             height: 16px;
         }
-    @media(max-width: 700px){
-    margin-bottom: 50px;
+    @media(max-width: 1024px){
+        margin-bottom: 50px;
     }
 `

@@ -2,27 +2,10 @@ import styled from 'styled-components';
 
 export const Container = styled.main`
 display:flex;
-/* align-items: center;
-justify-content: space-around; */
 height:100vh;
 width:100%;
 background-color: #fff;
-/* flex-wrap:wrap; */
-/* 
-    div{ 
-        /* width:441px;
-        height:604px; */
-        /* width: 50%;
-        height: 100%;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center; */
-/* 
-        p{ 
-            font-weight:400px;
-            font-size:20px;
-        } */
+
     
 
     .titlePage{
@@ -32,9 +15,7 @@ background-color: #fff;
         
     } 
 
-    /* img{
-        margin-top: 60px;
-    } */
+
 
     
     @media(max-width: 1024px){

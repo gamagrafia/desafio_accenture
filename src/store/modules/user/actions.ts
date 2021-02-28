@@ -1,4 +1,4 @@
-import { IDataAccount, IUser } from './interfaces';
+import { IUser } from './interfaces';
 import { Types } from './types';
 
 export const ActionsCreators  = {
@@ -17,12 +17,7 @@ export const ActionsCreators  = {
         }
     }),
 
-    lancamento: (dataAccount: IDataAccount) => ({
-        type: Types.LANCAMENTOS,
-        payload:{
-            dataAccount
-        }
-    })
+   
 
        
 }

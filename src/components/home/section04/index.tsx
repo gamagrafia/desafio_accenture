@@ -15,9 +15,6 @@ const Section04: React.FC = () => {
         </p>
       </BxHomeFive>
       <BxHomeFive>
-        {/* <body>
-          <img src={Celular3} alt="celular3" />
-        </body> */}
          <div>
           <img src={Celular3} alt="celular3" />
         </div>

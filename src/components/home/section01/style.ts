@@ -5,9 +5,8 @@ export const Container = styled.div`
 height:100%;
 width:100%;
 display:flex;
-/* flex-wrap:wrap; */
 
-    @media(max-width: 850px){
+    @media(max-width: 1024px){
         flex-direction: column;
 
     }
@@ -16,14 +15,12 @@ display:flex;
 export const DivPreta = styled.div`
 height:100vh;
 width:50%;
-/* flex-wrap:wrap; */
 display:flex;
 flex-direction: column;
 align-items:flex-start;
 justify-content:center;
 background-color: #000000;
     h1{ 
-        /* margin: 60px 39px 15px 107px; */
         color: #68DE5A;
         font-size: 34px;
         font-weight:500;
@@ -45,7 +42,7 @@ background-color: #000000;
         max-height:450px;
     }
 
-    @media(max-width: 850px){
+    @media(max-width: 1024px){
         width: 100%;
 
     }
@@ -53,7 +50,6 @@ background-color: #000000;
 export const DivBranca = styled.div`
 height:100vh;
 width:50%;
-/* flex-wrap:wrap; */
 display:flex;
 flex-direction: column;
 align-items:center;
@@ -62,7 +58,6 @@ background-color: #F8F8F8;
 
 
 h1{ 
-        /* margin: 60px 39px 15px 107px; */
         color:#1D1D1D;
         font-size: 34px;
         font-weight:500;
@@ -77,18 +72,13 @@ h1{
         max-height:100px;
         font-weight: 100px;
         font-size:21px;
-        /* margin: 10px 107px 0px 107px; */
         padding-top:15px;
         margin-right: 50px;
 ;
 ;
     }
-    img {
-        /* margin:0px 107px 0 107px ; */
-        /* max-height:450px; */
-    }
 
-    @media(max-width: 850px){
+    @media(max-width: 1024px){
         flex-direction: column;
         width:100%;
     }

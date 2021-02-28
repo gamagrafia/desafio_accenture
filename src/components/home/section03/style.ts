@@ -10,7 +10,6 @@ export const Container =styled.div`
     display:flex;
     height:100vh;
     padding-left: 150px;
-    /* fill:Solid; */
     background-color: #68DE5A;
 
     div{
@@ -29,7 +28,6 @@ export const BoxTecnologia= styled.div`
     
     width:50%;
     height:100%;
-    /* font-family:'Roboto'; */
     
     h5{
       padding-bottom: 20px;
@@ -37,7 +35,6 @@ export const BoxTecnologia= styled.div`
       font-size:42px; 
       font-weight:bold;
       font-style:normal;
-      /* align-items:center; */
       color:#FFFFFF;   
     }
   h4{
@@ -62,25 +59,3 @@ export const BoxTecnologia= styled.div`
     }
   }
 `
-// export const BoxComplexidade = styled.div`
-//     /* padding: 0 0 0 170px;
-//     width:459px;
-//     height:50px;
-//     font-family:'Roboto'; */
-//     display: flex;
-//     flex-direction: column;
-//     justify-content:center;
-//     align-items:center;
-//     width:50%;
-//     height:100%;
-
-// h5{
-//     line-height:49,22px;
-//     text-align:left; 
-//     font-size:42px; 
-//     font-weight:s bold;
-//     font-style:normal;
-//     align-items:center;
-//     color:#FFFFFF;   
-// }
-// `

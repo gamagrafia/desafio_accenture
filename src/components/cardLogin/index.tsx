@@ -49,7 +49,6 @@ const CardLogin: React.FC = () => {
 
       api.post('/login', loginData).then(
         response => {
-          // console.log(response.data)
           localStorage.setItem('@tokenApp', response.data.token);
           alert('logado')
        dispatch(ActionsCreators.login(response.data))

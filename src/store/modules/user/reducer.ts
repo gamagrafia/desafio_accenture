@@ -9,16 +9,14 @@ const INITIAL_STATE: IUserState = {
     
 }
 
-const INITIAL_DATA_ACCOUNT: IDataAccountState = {
-    lancamentos: [],
-}
+
 
 export const allUsers: Reducer<IUser | any> = (state = INITIAL_STATE.users, action) => {
     switch (action.type) {
         case Types.LOGIN: {
             console.log('login', action.payload);
 
-            const userContent = action.paylod;
+           // const userContent = action.paylod;
 
             return {
                 ...state,
@@ -48,25 +46,5 @@ export const allUsers: Reducer<IUser | any> = (state = INITIAL_STATE.users, acti
 
 }
 
-export const lancamentosUsers: Reducer<IDataAccount | any> = (state = INITIAL_DATA_ACCOUNT, action) => {
-    switch (action.type) {
-        case Types.LANCAMENTOS: {
-            console.log('lancamentos', action.payload);
 
-            //const userContent = action.paylod;
-
-            return {
-                ...state,
-                lancamentos: [
-                    action.payload.dataAccount
-                ]
-            }
-        };
-
-        default:
-            return state
-
-    }
-
-}
 
