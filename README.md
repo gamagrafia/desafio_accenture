@@ -13,13 +13,13 @@
     <img alt="GAMABANK-Dashboard" title="#Dashboard" src="./img/DasR.jpg" widht="50px" />
 </h1>
 
-# 📑 SOBRE
+### 📑 SOBRE
 <p>Projeto Acadêmico realizado junto com Accenture Academy e Gama Academy, onde foi desenvolvido uma aplicação de um banco onde é possível fazer um novo cadastro, acessar a conta, realizar transações e visualizar extrato. </p>
 
-# 🚀 OJETIVO 
+### 🚀 OJETIVO 
  <p>O GamaBank ele tem como objetivo trazer uma melhor expêriencia para os nossos clientes e mais agilidade ao acesso das inforações referente à sua conta. Trazendo segurança e comodidade. </p>
 
-# 📌 Mindmap
+### 📌 Mindmap
 <h1 align="center">
     <img alt="Mindmap" title="#Mindmap" src="./img/Mindmap.jpg"  width=50px/>
 </h1>
@@ -58,36 +58,41 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Axios](Consumo da API)
 
 
-# 🔄 Rodando a aplicação web (Front End)
+### 🔄 Rodando a aplicação web (Front End)
 #### Clone este repositório
 $ git clone https://github.com/gamagrafia/desafio_aceenture.git
 
-### Acesse a pasta do projeto no seu terminal/cmd
+#### Acesse a pasta do projeto no seu terminal/cmd
 $ cd desafio_accenture
 
-### Instale as dependências
+#### Instale as dependências
 $ npm install ou yarn install
 
-### Execute a aplicação em modo de desenvolvimento
+#### Execute a aplicação em modo de desenvolvimento
 $ npm run start ou yarn start 
 
-### A aplicação será aberta na porta:3000 - acesse http://localhost:3000
+#### A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 
-# Autores
+
+### Autores
 
  <a href="https://www.linkedin.com/in/alitsavirginia/">
  <img style="border-radius: 50%;" src="./img/alitsa.jpg" width="100px" alt="alitsa"/>
+ </br>
  <sub><b>Alitsa Virginia</b></sub></a> <a title="GAMA ACADEMY"> 🚀</a>
  
  <a href="https://www.linkedin.com/in/claudialeite-dev/">
+ </br>
  <img style="border-radius: 50%;" src="./img/claudia.jpg" width="100px" alt="claudia"/>
  <sub><b>Claudia Leite</b></sub></a> <a title="GAMA ACADEMY">🚀</a>
 
  <a href="https://www.linkedin.com/in/carolinecasagrande/">
+ </br>
  <img style="border-radius: 50%;" src="./img/carol.jpg" width="100px" alt="Caroline"/>
  <sub><b>Caroline Casagrande</b></sub></a> <a title="GAMA ACADEMY">🚀</a>
 
  <a href="https://www.linkedin.com/in/flavio-gama-b206243a/">
+ </br>
  <img style="border-radius: 50%;" src="./img/flavio.jpg" width="100px" alt="Flavio"/>
  <sub><b>Flavio Gama</b></sub></a> <a title="GAMA ACADEMY">🚀</a>
 
