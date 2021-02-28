@@ -48,7 +48,6 @@ const PassRequest: React.FC = () => {
             api.post("/nova-senha", dataRequest).then(
                 response => {
                     localStorage.setItem('@tempPass', response.data);
-                    // dispatch(ActionsCreators.update_pass(response.data))
                     alert('Sua senha foi enviada para o seu email, registre uma nova!');
                     setEmail("");
                     setLogin("");

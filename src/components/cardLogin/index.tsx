@@ -9,8 +9,6 @@ import { IToken } from '../../store/modules/user/interfaces';
 import { Container, LinkSections } from './style';
 
 
-
-
 const CardLogin: React.FC = () => {
   const history = useHistory();
   const dispatch = useDispatch()
@@ -33,42 +31,36 @@ const CardLogin: React.FC = () => {
       localStorage.clear()
   }, [storage])
 
-
-
-  const handleLogin = (e:FormEvent<HTMLFormElement>) => {
+  const handleLogin = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
 
     const loginData = {
       usuario: login,
       senha: password
     }
-    
+
     try {
 
       api.post('/login', loginData).then(
         response => {
-          // console.log(response.data)
           localStorage.setItem('@tokenApp', response.data.token);
           localStorage.setItem('@login', login);
-          alert('logado')
+          alert('Logado')
           dispatch(ActionsCreators.login(response.data))
-         
+
           history.push('/dashboard')
         }
 
 
       ).catch(e => {
-        // console.clear();
         history.push('/error')
       })
 
-    }catch (error){
+    } catch (error) {
       console.log(error);
     }
-  
 
-    
+
 
   }
 
