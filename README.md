@@ -9,10 +9,10 @@
     ![home5](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home5.PNG)
 * LOGIN 
     ![Login](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Login.PNG)
+* SENHA  
+    ![Recovery](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/recoveryPassRead.PNG)
 * ERRO
    ![Erro](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/ErrorRead.PNG)
-* ALTERAR SENHA  
-    ![Recovery](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/recoveryPassRead.PNG)
 * ESQUECI SENHA 
     ![PassRead](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/recoveryPassRead.PNG)
 * DASBOARD
