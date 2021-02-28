@@ -62,7 +62,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [TypeScript](https://www.typescriptlang.org/)
 - [style-componts](https://styled-components.com/)
 - [Jest](https://jestjs.io/)
-- [Axios](Consumo da API)
+- [Axios](https://www.npmjs.com/package/axios)
 
 
 ### 🔄 Rodando a aplicação web (Front End)
