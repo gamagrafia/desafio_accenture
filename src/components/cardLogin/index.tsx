@@ -2,13 +2,11 @@ import React, { FormEvent, useCallback, useEffect, useState } from 'react';
 import { FiArrowRight, FiChevronRight } from 'react-icons/fi';
 import { useDispatch } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
-
+import {toast} from 'react-toastify';
 import api from '../../services/api';
 import { ActionsCreators } from '../../store/modules/user/actions';
 import { IToken } from '../../store/modules/user/interfaces';
 import { Container, LinkSections } from './style';
-
-
 
 
 const CardLogin: React.FC = () => {
@@ -50,7 +48,7 @@ const CardLogin: React.FC = () => {
         response => {
           // console.log(response.data)
           localStorage.setItem('@tokenApp', response.data.token);
-          alert('logado')
+          toast.success('logado')
           dispatch(ActionsCreators.login(response.data))
          
           history.push('/dashboard')

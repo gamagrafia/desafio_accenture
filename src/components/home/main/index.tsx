@@ -1,6 +1,6 @@
 import React, { FormEvent, useCallback, useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-
+import {toast} from 'react-toastify';
 import ArrowGray from '../../../img/arrowgray.png';
 import Arrow from '../../../img/arrowwhite.png';
 import Logo from '../../../img/logo.png';
@@ -28,7 +28,7 @@ const Main: React.FC = () => {
     }
 
     if (password !== confirmPass) {
-      alert('Ops, as senhas devems er iguais, tente novamente!')
+      toast.error('Ops, as senhas devem ser iguais, tente novamente!')
       return;
 
     }
@@ -37,20 +37,20 @@ const Main: React.FC = () => {
         response => {
           if (response.status === 200) {
             console.log(response.status)
-            alert("Registrado")
+            toast.success("Registrado")
             history.push('/login')
           }
         }
       ).catch((e) => {
         if (e.response.status === 400) {
           // console.clear();
-          alert(`Usuario: ${userName} ja esta sendo usado! Tente outro.`)
+          toast.error(`Usuario: ${userName} ja esta sendo usado!Tente outro.`)
         } else {
-          alert(`Error message: ${e.message}`)
+          toast.error(`Error message: ${e.message}`)
         }
       })
     } catch (e) {
-      alert('algo deu errado')
+      toast.error('algo deu errado')
     }
 
 

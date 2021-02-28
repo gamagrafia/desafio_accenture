@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-
+import { ToastContainer } from 'react-toastify';
 import Routes from './routes/routes';
 import GlobalStyle from './style/global';
+import 'react-toastify/dist/ReactToastify.css'
 
 
 const App: React.FC = () => {
@@ -12,7 +13,7 @@ const App: React.FC = () => {
           <Routes/>
       </BrowserRouter>
     <GlobalStyle/>
-    
+    <ToastContainer/>   
     </>
   );
 }

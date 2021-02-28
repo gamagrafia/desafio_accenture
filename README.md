@@ -9,8 +9,6 @@
     ![home5](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home5.PNG)
 * LOGIN 
     ![Login](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Login.PNG)
-* SENHA  
-    ![Recovery](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/recoveryPassRead.PNG)
 * ERRO
    ![Erro](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/ErrorRead.PNG)
 * ESQUECI SENHA 

@@ -2,11 +2,8 @@ import React, { useState } from 'react';
 import { AiOutlineBank, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { GiWallet } from 'react-icons/gi';
 import { RiCloseLine, RiMoneyDollarCircleLine } from 'react-icons/ri';
-import { useHistory } from 'react-router-dom';
-
-// import logoDash from '../../img/logo-dash.svg';
+import { useHistory } from 'react-router-dom';// import logoDash from '../../img/logo-dash.svg';
 import { BankPostBox, BoxAccount, DashContainer, MainContent, SideBar, SideBarButton } from './style';
-import Depositos from '../../components/deposito';
 
 
 const Dashboard: React.FC = () => {
@@ -30,21 +27,14 @@ const Dashboard: React.FC = () => {
             <DashContainer>
                 
                 <SideBar>
-                    {/* <img src={logoDash} alt="Logo Dashboard" /> */}
-                    <SideBarButton>
-                    <AiOutlineBank  onClick={handleShow} size={35} />  Depósitos    </SideBarButton>
-                    <SideBarButton  ><AiOutlineBank size={35} />Planos</SideBarButton>
+                    <SideBarButton ><AiOutlineBank size={35} />Planos</SideBarButton>
                     <SideBarButton><AiOutlineBank size={35} />Pagamentos</SideBarButton>
                     <SideBarButton><AiOutlineBank size={35} />Transações</SideBarButton>
                 </SideBar>
                 <MainContent>
-                 { showDeposito === true &&
-                    <Depositos/>
-                 }
-                 { showDeposito === false &&
                  <>
                     <div>
-                    <h2>Olá , seja bem vindo!</h2><RiCloseLine onClick={closeSession} size={40} />
+                    <h2>Olá, seja bem vindo!</h2><RiCloseLine onClick={closeSession} size={40} />
                     <AiOutlineEyeInvisible color=" #68DE5A" size={40} />
                 </div>
                 
@@ -84,9 +74,7 @@ const Dashboard: React.FC = () => {
                         </div>
                     </div>
                 </BankPostBox>
-                </>
-                 }
-                    
+                </> 
                 </MainContent>
             </DashContainer>
         </>
