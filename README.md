@@ -84,11 +84,11 @@ $ npm run start ou yarn start
 ### Autores
 
 <h3 align="center">
-Feito com ❤️ por 
-<a href="https://www.linkedin.com/in/alitsavirginia/">Alitsa Virginia 
-<a href="https://www.linkedin.com/in/claudialeite-dev/">Claudia Leite
-<a href="https://www.linkedin.com/in/carolinecasagrande/">Caroline Casagrande
-<a href="https://www.linkedin.com/in/flavio-gama-b206243a/">Flavio Gama
+Feito com 💜 por 
+<a href="https://www.linkedin.com/in/alitsavirginia/">Alitsa Virginia, 
+<a href="https://www.linkedin.com/in/claudialeite-dev/">Claudia Leite,
+<a href="https://www.linkedin.com/in/carolinecasagrande/">Caroline Casagrande,
+<a href="https://www.linkedin.com/in/flavio-gama-b206243a/">Flavio Gama,
 </a>
 <br><br>
 
