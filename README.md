@@ -2,16 +2,16 @@
 <p>Projeto desenvolvido por Alitsa Virgínia, Claudia Leite, Caroline Casagrande, Flávio Gama. Com intuito de mostrar nosso conhecimento e todo aprendizado que tivemos ao decorrer de um mês na Gama Academy. </p> 
 
 
-	![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home1.PNG)
-	![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home2.PNG)
-	![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home3.PNG)
-	![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home4.PNG)
-	![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home5.PNG)
-    ![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Login.PNG)
-    ![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/recoveryPassRead.PNG)
-    ![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/ErrorRead.PNG)
-    ![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/recoveryPassRead.PNG)
-    ![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/DashRead.PNG)
+    ![home1](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home1.PNG)
+    ![home2](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home2.PNG)
+    ![home3](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home3.PNG)
+    ![home4](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home4.PNG)
+    ![home5](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Home5.PNG)
+    ![Login](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Login.PNG)
+    ![Recovery](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/recoveryPassRead.PNG)
+    ![Erro](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/ErrorRead.PNG)
+    ![PassRead](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/recoveryPassRead.PNG)
+    ![DashRead](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/DashRead.PNG)
 
 
 ### 📑 SOBRE
@@ -21,7 +21,7 @@
  <p>O GamaBank ele tem como objetivo trazer uma melhor expêriencia para os nossos clientes e mais agilidade ao acesso das inforações referente à sua conta. Trazendo segurança e comodidade. </p>
 
 ### 📌 Mindmap
-	![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/mindmapAccventure.png)
+	![Mindmap](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/mindmapAccventure.png)
 
 
 
@@ -78,23 +78,23 @@ $ npm run start ou yarn start
 ### Autores
 
  <a href="https://www.linkedin.com/in/alitsavirginia/">
- ![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Alitsa.jpeg)
+ ![alitsa](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Alitsa.jpeg)
  </br>
  <sub><b>Alitsa Virginia</b></sub></a> <a title="GAMA ACADEMY"> 🚀</a>
  
  <a href="https://www.linkedin.com/in/claudialeite-dev/">
  </br>
- ![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/mindmapAccventure.png)
+ ![Claudia](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Claudia.jpeg)
  <sub><b>Claudia Leite</b></sub></a> <a title="GAMA ACADEMY">🚀</a>
 
  <a href="https://www.linkedin.com/in/carolinecasagrande/">
  </br>
- ![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Carol.jpeg)
+ ![Caroline](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Carol.jpeg)
  <sub><b>Caroline Casagrande</b></sub></a> <a title="GAMA ACADEMY">🚀</a>
 
  <a href="https://www.linkedin.com/in/flavio-gama-b206243a/">
  </br>
- ![alt text]()
+ ![Flavio](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Flavio.jpeg)
  <sub><b>Flavio Gama</b></sub></a> <a title="GAMA ACADEMY">🚀</a>
 
 
