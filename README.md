@@ -47,4 +47,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ![alt text](https://github.com/gamagrafia/desafio_aceenture/blob/principal/src/img/logo.png)
 
-![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/Claudia.jpeg)
+![alt text](https://github.com/carolcasagrande/ImagensReadme/blob/main/imgReadme/DashRead.PNG)
