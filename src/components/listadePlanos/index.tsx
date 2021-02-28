@@ -1,6 +1,6 @@
 import { useState, FormEvent, useEffect } from "react";
 import api from "../../services/api";
-import { Container, Forms } from "./style";
+import { Container,  } from "./style";
 import decode from 'jwt-decode';
 
 
@@ -9,12 +9,21 @@ interface IUserDash{
   sub: string
 }
 interface IUserPlans{
-  planos:[]
+  id:string,
+  descricao:string,
+  login:string,
+  tipoMovimento:string,
+  padrao: boolean,
+  
+
 }
 
 const Planos: React.FC = () => {
-  const [planos, setplanos] = useState();
+  const [planos, setplanos] = useState<IUserPlans[]>([]);
   const [lancamentos,setLancamentos] = useState();
+
+
+  const data = []
 
   const TokenStorage = null || localStorage.getItem('@tokenApp')
 
@@ -39,27 +48,24 @@ const Planos: React.FC = () => {
         },
       })
       .then((res) => {
-        setplanos(res.data);
-        console.log(res.data);
-      });
-  }, []);
-  https://accenture-java-desafio.herokuapp.com/dashboard?fim=2020-01-01&inicio=2020-01-01&login=dmorais23
 
-  useEffect(() => {
-    api.get(`dashboard?fim=2020-01-01&inicio=2020-01-01&login=${TokenDecodedValue()}`, {
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": localStorage.getItem("@tokenApp"),
-        },
-      })
-      .then((res) => {
-        setLancamentos(res.data);
+        setplanos(JSON.parse(res.data));
+        
         console.log(res.data);
+        
       });
   }, []);
+ 
 
   return (
     <>
+    <Container> 
+    <h1> Esses são os seus Planos atuais:</h1>
+    <h1>{planos.map(item => ( item.id))}</h1>
+    
+    
+     
+    </Container>
      
     </>
   );

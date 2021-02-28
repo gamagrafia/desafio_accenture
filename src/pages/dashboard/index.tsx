@@ -73,7 +73,7 @@ const Dashboard: React.FC = () => {
                     <Planos/>
                  }
 
-                 { showDeposito || showTransferencia === false &&
+                 { showDeposito || showTransferencia || showPlanos === false &&
                  <>
                     <div>
                     <h2>Olá , seja bem vindo!</h2><RiCloseLine onClick={closeSession} size={40} />
