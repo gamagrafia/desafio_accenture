@@ -33,6 +33,7 @@
 
 ### ✅ Features
 
+<!--ts-->
 Funcionalidades:
 
 -[✔]-Cadastro de usuários;
@@ -52,6 +53,8 @@ Obrigatório:
 -[✔]-Controle de rotas públicas e privadas;
 -[✔]-Fazer uso de Hooks;
 -[✔]-Consumir API e fazer controle de sessão conforme as funcionalidades descritas acima;
+<!--te-->
+
 
 ### 🔨 Tecnologias
 
