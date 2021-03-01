@@ -19,9 +19,13 @@
 
 ### 📑 SOBRE
 <p>Projeto Acadêmico realizado junto com Accenture Academy e Gama Academy, onde foi desenvolvido uma aplicação de um banco onde é possível fazer um novo cadastro, acessar a conta, realizar transações e visualizar extrato. </p>
+### 🚀 Acesso ao projeto:
+<p>https://accventure.netlify.app/</p>
 
 ### 🚀 OJETIVO 
  <p>O GamaBank ele tem como objetivo trazer uma melhor expêriencia para os nossos clientes e mais agilidade ao acesso das inforações referente à sua conta. Trazendo segurança e comodidade. </p>
+
+
 
 ### 📌 Mindmap
 
