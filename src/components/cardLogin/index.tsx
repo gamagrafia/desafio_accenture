@@ -2,7 +2,9 @@ import React, { FormEvent, useCallback, useEffect, useState } from 'react';
 import { FiArrowRight, FiChevronRight } from 'react-icons/fi';
 import { useDispatch } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
-import {toast} from 'react-toastify';
+import { toast } from 'react-toastify';
+
+
 import api from '../../services/api';
 import { ActionsCreators } from '../../store/modules/user/actions';
 import { IToken } from '../../store/modules/user/interfaces';
@@ -31,41 +33,36 @@ const CardLogin: React.FC = () => {
       localStorage.clear()
   }, [storage])
 
-
-
-  const handleLogin = (e:FormEvent<HTMLFormElement>) => {
+  const handleLogin = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
 
     const loginData = {
       usuario: login,
       senha: password
     }
-    
+
     try {
 
       api.post('/login', loginData).then(
         response => {
-          // console.log(response.data)
           localStorage.setItem('@tokenApp', response.data.token);
-          toast.success('logado')
+          localStorage.setItem('@login', login);
+          toast.success('Logado')
           dispatch(ActionsCreators.login(response.data))
-         
+
           history.push('/dashboard')
         }
 
 
       ).catch(e => {
-        console.clear();
         history.push('/error')
       })
 
-    }catch (error){
+    } catch (error) {
       console.log(error);
     }
-  
 
-    
+
 
   }
 

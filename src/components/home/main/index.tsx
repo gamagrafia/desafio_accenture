@@ -1,6 +1,7 @@
 import React, { FormEvent, useCallback, useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import {toast} from 'react-toastify';
+import { toast } from 'react-toastify';
+
 import ArrowGray from '../../../img/arrowgray.png';
 import Arrow from '../../../img/arrowwhite.png';
 import Logo from '../../../img/logo.png';
@@ -21,14 +22,14 @@ const Main: React.FC = () => {
     event.preventDefault()
 
     const postData = {
-      cpf,
+      cpf:cpf,
       nome: name,
       login: userName,
       senha: password
     }
 
     if (password !== confirmPass) {
-      toast.error('Ops, as senhas devem ser iguais, tente novamente!')
+        toast.error('Ops, as senhas devems er iguais, tente novamente!')
       return;
 
     }
@@ -44,7 +45,7 @@ const Main: React.FC = () => {
       ).catch((e) => {
         if (e.response.status === 400) {
           // console.clear();
-          toast.error(`Usuario: ${userName} ja esta sendo usado!Tente outro.`)
+          toast.info(`Usuario: ${userName} ja esta sendo usado! Tente outro.`)
         } else {
           toast.error(`Error message: ${e.message}`)
         }
@@ -87,8 +88,9 @@ const Main: React.FC = () => {
             <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Digite sua senha" />
             <input type="password" value={confirmPass} onChange={e => setConfirmPass(e.target.value)} placeholder="Confirme sua senha" />
 
-            <button>Continuar <img src={ArrowGray} alt="" /></button>
-          
+      
+              <button>Continuar <img src={ArrowGray} alt="" /></button>
+           
           </Form>
         </SideRight>
       </SectionOne>

@@ -10,7 +10,7 @@ const INITIAL_STATE: IUserState = {
 }
 
 
-export const allUsers: Reducer<IUser | any> = (state = INITIAL_STATE.users, action) => {
+export const allUsers: Reducer<IUser | any> = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case Types.LOGIN: {
             console.log('login', action.payload);

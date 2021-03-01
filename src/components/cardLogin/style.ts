@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
     width:430px;
     height:450px;
     background-color:#FBFBFB;
     margin:auto;
-    border-radius:3px;
+    border-radius:5px;
     display:flex;
     flex-direction:column;
     justify-content: space-around;  
@@ -25,7 +25,7 @@ export const Container = styled.div`
                     font-weight: 300;
                     text-align:left;
                     width: 85%;
-                    margin: 25px;
+                    margin: 30px 25px;
                     border-bottom: 2px solid #666;
                     transition: 0.5s;
                     &:focus{
