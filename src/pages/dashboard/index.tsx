@@ -4,32 +4,35 @@ import { AiOutlineBank } from 'react-icons/ai';
 import { BiExit } from 'react-icons/bi';
 import { GiExitDoor, GiWallet } from 'react-icons/gi';
 import { RiMoneyDollarCircleLine } from 'react-icons/ri';
+import ReactLoading from 'react-loading';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+
 import Depositos from '../../components/deposito';
+import Planos from '../../components/listadePlanos';
+import Transferencia from '../../components/transferencias';
 import logoDash from '../../img/logo-dash.svg';
 import api from '../../services/api';
 import { IDataAccount, IUserDash } from '../../store/modules/user/interfaces';
 import { BankPostBox, BoxAccount, DashContainer, MainContent, SideBar, SideBarButton } from './style';
-import Transferencia from'../../components/transferencias';
-import Planos from '../../components/listadePlanos/index';
 
+// import from "react-loading";
 const Dashboard: React.FC = () => {
     // let globalState = useSelector((state:IUserState) => state.users);
-    const [ dataAccount, setDataAccount ] = useState<IDataAccount>();
+    const [dataAccount, setDataAccount] = useState<IDataAccount>();
     const [showDeposito, setShowDeposito] = useState(false)
     const [hidemainSection, setHideMainSection] = useState(false)
     const [showTransferencia, setShowTransferencia] = useState(false)
     const [showPlanos, setShowPlanos] = useState(false)
-    const [loading, setLoading] = useState(false);
-    const login = localStorage.getItem('@login');
-    console.log(login);
     const history = useHistory();
     const dispatch = useDispatch();
     const [accountData, setAccountData] = useState<IDataAccount>();
     const TokenStorage = null || localStorage.getItem('@tokenApp')
     const [lancamentos, setLancamentos] = useState<IDataAccount[]>([])
     const [showNovosPlanos, setShowNovosPlanos] = useState(false)
+    const [isLoading, setLoading] = useState(false);
+
+    const login = localStorage.getItem('@login');
 
 
     function closeSession() {
@@ -37,52 +40,36 @@ const Dashboard: React.FC = () => {
         history.push('/');
     }
 
-    useEffect(() => {
-      try {
-          api.get("/dashboard", {
-         params: {
-         inicio: '2021-01-01',
-         fim: '2021-01-31',
-         login: `${TokenDecodedValue()}`
-             },
-           headers: {
-             "Content-Type": "application/json",
-             "Authorization": localStorage.getItem("@tokenApp"),
-           },
-         })
-         .then((response) => {
-           const data = (response.data);
-           setLancamentos(data);
-              
-           console.log(lancamentos)
-         })
-         .catch((e) => {});
-     } catch (e) {
-     }
-      }, [setLancamentos])
 
-      useEffect(() => {
+
+    useEffect(() => {
+        setLoading(true)
         try {
             api.get("/dashboard", {
-           params: {
-           inicio: '2021-01-01',
-           fim: '2021-01-31',
-           login: `${TokenDecodedValue()}`
-               },
-             headers: {
-               "Content-Type": "application/json",
-               "Authorization": localStorage.getItem("@tokenApp"),
-             },
-           })
-           .then((response) => {             
-             setAccountData(response.data);
-              setDataAccount(response.data);               
-             
-           })
-           .catch((e) => {});
-       } catch (e) {
-       }
-        }, [showDeposito])
+                params: {
+                    inicio: '2021-01-01',
+                    fim: '2021-01-31',
+                    login: `${TokenDecodedValue()}`
+                },
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": localStorage.getItem("@tokenApp"),
+                },
+            })
+                .then((response) => {
+                    setAccountData(response.data);
+                    setDataAccount(response.data);
+                    const data = (response.data);
+                    setLancamentos(data);
+
+                    setLoading(false)
+
+                })
+                .catch((e) => {
+                });
+        } catch (e) {
+        }
+    }, [showDeposito, showPlanos, showTransferencia])
     // const dashState = useSelector((state:IDataAccountState) => state.lancamentosAccount)
     const TokenDecodedValue = () => {
         if (TokenStorage) {
@@ -99,24 +86,27 @@ const Dashboard: React.FC = () => {
         showDeposito ? setShowDeposito(false) : setShowDeposito(true)
         hidemainSection ? setHideMainSection(false) : setHideMainSection(true)
         // console.log('teste')
-    } 
-  
-  function handleShowTransferencia(){
-      
-      showTransferencia ? setShowTransferencia(false) : setShowTransferencia(true)
-      hidemainSection ? setHideMainSection(false) : setHideMainSection (true)
-  }
-  function handleShowPlanos(){
-      
-      showPlanos ? setShowPlanos(false) : setShowPlanos(true)
-      hidemainSection ? setHideMainSection(false) : setHideMainSection (true)
-  }
+        setShowPlanos(false);
+        setShowTransferencia(false);
+    }
 
-  function handleShowNovosPlanos(){
-        
-    showNovosPlanos ? setShowNovosPlanos(false) : setShowNovosPlanos(true)
-    hidemainSection ? setHideMainSection(false) : setHideMainSection (true)
-}
+    function handleShowTransferencia() {
+
+        showTransferencia ? setShowTransferencia(false) : setShowTransferencia(true)
+        hidemainSection ? setHideMainSection(false) : setHideMainSection(true)
+
+        setShowPlanos(false);
+        setShowDeposito(false);
+    }
+    function handleShowPlanos() {
+
+        showPlanos ? setShowPlanos(false) : setShowPlanos(true)
+        hidemainSection ? setHideMainSection(false) : setHideMainSection(true)
+        setShowDeposito(false);
+        setShowTransferencia(false);
+    }
+
+
 
 
     return (
@@ -127,71 +117,80 @@ const Dashboard: React.FC = () => {
                     <SideBarButton onClick={handleShowDeposito}><AiOutlineBank size={35} />Depósitos</SideBarButton>
                     <SideBarButton onClick={handleShowTransferencia}><AiOutlineBank size={35} />Transferências </SideBarButton>
                     <SideBarButton onClick={handleShowPlanos}><AiOutlineBank size={35} />Planos</SideBarButton>
-                    <SideBarButton onClick={handleShowPlanos}><AiOutlineBank size={35} />Criar Planos</SideBarButton>
-                    <GiExitDoor className="icon-exit" onClick={closeSession} size={50} color=" #000" />
+                    <GiExitDoor cursor="pointer" className="icon-exit" onClick={closeSession} size={50} color=" #000" />
                 </SideBar>
                 <MainContent>
-                { showDeposito === true &&
-                    <Depositos/>
-                 }
-                 { showTransferencia === true &&
-                    <Transferencia/>
-                 }
-                { showPlanos === true &&
-                    <Planos/>
-                 }
-                 { showDeposito || showTransferencia || showPlanos === false &&
+                    {showDeposito === true &&
+                        <Depositos />
+                    }
+                    {showTransferencia === true &&
+                        <Transferencia />
+                    }
+                    {showPlanos === true &&
+                        <Planos />
+                    }
+                    {showDeposito || showTransferencia || showPlanos === false &&
                         <>
                             <div>
-                                <h2>Olá <span>{login}</span>, seja bem vindo!</h2><BiExit onClick={closeSession} size={40} color=" #68DE5A" />
+                                <h2>Olá <span>{login}</span>, seja bem vindo!</h2><BiExit cursor="pointer" onClick={closeSession} size={40} color=" #68DE5A" />
                             </div>
                             <div>
+
                                 <BoxAccount>
                                     <div className="dash_ttl_acc"><RiMoneyDollarCircleLine color="9B9B9B" size={50} /><h4>Conta: {accountData?.contaBanco.id}</h4>
                                     </div>
                                     <p>Saldo Disponivel</p>
-                                    
-                                    <h1 className="dash_balance_acc">{accountData?.contaBanco.saldo}</h1>
-                                   
+                                    {isLoading ? (<ReactLoading type="spin" color="#000" height={30} width={30} />) :
+                                        (<h1 className="dash_balance_acc">{accountData?.contaBanco.saldo}</h1>
+                                        )
+                                    }
+
                                 </BoxAccount>
                                 <BoxAccount>
                                     <div className="dash_ttl_acc"><RiMoneyDollarCircleLine color="9B9B9B" size={50} /><h4>Conta Credito: {accountData?.contaCredito.id}</h4>
                                     </div>
                                     <p>Saldo Disponivel</p>
-                                    <h1 className="dash_balance_acc_credit">{accountData?.contaCredito.saldo}</h1>
+                                    {isLoading ? (<ReactLoading type="spin" color="#000" height={30} width={30} />) :
+                                        (<h1 className="dash_balance_acc">{accountData?.contaCredito.saldo}</h1>
+                                        )
+                                    }
                                 </BoxAccount>
                             </div>
                             <BankPostBox>
-                        <div className="ttl-componente"><RiMoneyDollarCircleLine color="9B9B9B" size={50} /><h4>Últimos lançamentos</h4></div>
-                        <div>
-                            <GiWallet className="dash_post_icon" color="9B9B9B" size={35} />
-                            <div>
-                                <h3>Compra no Debito</h3>
-                                
-                                 {dataAccount?.contaBanco.lancamentos.map( ( account: any, index: number ) => (
-                                  <div key={index} className="lancamentos">
-                                    <h4>{account.descricao}</h4>
-                                    <h1>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(account.valor)}</h1>
-                                    <p>{account.data.split("-").reverse().join("/")}</p>
-                                  </div>
-                                ))} 
-                                
-                            </div>
+                                <div className="ttl-componente"><GiWallet className="dash_post_icon" color="9B9B9B" size={35} /><h4>Últimos lançamentos</h4></div>
+                                <div>
 
-                            <div>
-                                <h3>Compra no Crédito</h3>
-                                
-                                 { dataAccount?.contaCredito.lancamentos.map( ( account: any, index: number ) => (
-                                  <div key={index} className="lancamentos">
-                                    <h4>{account.descricao}</h4>
-                                    <h1>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(account.valor)}</h1>
-                                    <p>{account.data.split("-").reverse().join("/")}</p>
-                                  </div>
-                                ))}
-                                 
-                            </div>
-                        </div>
-                    </BankPostBox>
+                                    <div>
+                                        <h3>Compra no Debito</h3>
+
+                                        {dataAccount?.contaBanco.lancamentos.map((account: any, index: number) => (
+                                            <div key={index} className="lancamentos">
+                                                <h4>{account.descricao}</h4>
+                                                <h1>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(account.valor)}</h1>
+                                                <p>{account.data.split("-").reverse().join("/")}</p>
+
+
+                                            </div>
+                                        ))}
+
+                                    </div>
+
+
+
+                                    <div>
+                                        <h3>Compra no Crédito</h3>
+
+                                        {dataAccount?.contaCredito.lancamentos.map((account: any, index: number) => (
+                                            <div key={index} className="lancamentos">
+                                                <h4>{account.descricao}</h4>
+                                                <h1>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(account.valor)}</h1>
+                                                <p>{account.data.split("-").reverse().join("/")}</p>
+                                            </div>
+                                        ))}
+
+                                    </div>
+                                </div>
+                            </BankPostBox>
                         </>
                     }
                 </MainContent>

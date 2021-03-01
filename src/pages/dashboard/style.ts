@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+
 export const DashContainer = styled.div`
     display: flex;
     background-color: #8C52E5;
     width: 100%;
+    height: 100vh;
     
     @media(max-width: 1024px){
         height: fit-content;
@@ -52,23 +54,26 @@ export const SideBar =  styled.aside`
     }
 `
 export const SideBarButton = styled.button`
-    width: 90px;
+    width: 95px;
     height: 90px;
     margin-top: 40px;
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     background-color: #8C52E5;
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
-    justify-content: space-between;
-    padding: 8px 8px ;
+    align-items:center;
+    justify-content:center;
+    
     border-color: none;
     box-shadow: inset -9px -8px 20px 8px #7030D2;
     border: 0px solid #8C52E5; 
     border-radius: 5px; 
     :hover{
         background-color:#9a84bd;
+    }
+    svg{
+        margin-bottom: 8px;
     }
 `
 export const MainContent = styled.main`
@@ -84,9 +89,7 @@ export const MainContent = styled.main`
         font-size: 1.8rem;
         font-weight: 500;
     }
-    svg {
-        cursor:pointer;
-    }
+    
     h2{
         width: 100%;
         color: #fff;
@@ -106,13 +109,14 @@ export const MainContent = styled.main`
     }
         @media(max-width: 1301px){
             width:100%;
+            padding-left: 100px;
         div{
             width: 100%;
             height:fit-content;
         }
     }
         @media(max-width: 1024px){
-            padding-left: 200px;
+            padding-left: 170px;
             svg{
                 display:none;
             }
@@ -123,7 +127,7 @@ export const MainContent = styled.main`
         }
     }
         @media(max-width: 768px){
-            padding-left: 140px;
+            padding-left: 190px;
             svg{
                 display:none;
             }
@@ -146,6 +150,9 @@ export const BoxAccount = styled.section`
     align-items:center;
     border-radius: 8px;
     margin-bottom: 40px;
+    p{
+        margin-bottom: 10px;
+    }
     .dash_ttl_acc{
         display: flex;
         margin-bottom: 30px;
@@ -200,10 +207,13 @@ export const BoxAccount = styled.section`
 `
 export const BankPostBox = styled.section`
     background-color: #fff;
-    border-radius: 10px;
     width: 90%;
-    height: 100%;
+    height: 350px;
     padding: 30px;
+    overflow-y: scroll; 
+    .dash_post_icon {
+        margin-bottom: 30px;
+    }
     .ttl-componente{
         display: flex;
         margin-bottom: 30px;
@@ -225,6 +235,11 @@ export const BankPostBox = styled.section`
     }
     h3{
         margin-bottom: 8px;
+        background-color: #6354547a;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0px;
+        
     }
     div{
         display: flex;
@@ -266,9 +281,7 @@ export const BankPostBox = styled.section`
         justify-content:center;
         align-items:center;
         flex-direction:column;
-        .dash_post_icon{
-            display:none;
-        }
+        
         .lancamentos{
             p{
                 margin-right:25px;
@@ -280,9 +293,7 @@ export const BankPostBox = styled.section`
         justify-content:center;
         align-items:center;
         flex-direction:column;
-        .dash_post_icon{
-            display:none;
-        }
+        
         .lancamentos{
             p{
                 margin-right:25px;

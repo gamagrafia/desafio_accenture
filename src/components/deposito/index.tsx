@@ -1,10 +1,10 @@
 import { FormEvent, useState } from 'react';
-//import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 
 import api from '../../services/api';
 import { Container, Forms } from './style';
 
+//import { useDispatch } from 'react-redux';
 const Depositos: React.FC = () => {
 //const dispatch = useDispatch();
 
@@ -43,11 +43,11 @@ const Depositos: React.FC = () => {
             "Authorization": tokeValue,
           },
         })
-        /* .then((response) => {
-          toast.success("Depositado!")})
+        .then((response) => {
+          toast.success("Depositado com sucesso!")})
         .catch((e) => { 
-          (e.message)
-        }); */
+          toast.error("Ops, algo deu errado!")
+        })
     } catch (e) {
      // toast.error('erro');
     }

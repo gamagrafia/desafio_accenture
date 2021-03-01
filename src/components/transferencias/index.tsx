@@ -1,6 +1,8 @@
-import { useState, FormEvent, useEffect } from "react";
-import api from "../../services/api";
-import { Container, Forms } from "./style";
+import { FormEvent, useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
+
+import api from '../../services/api';
+import { Container, Forms } from './style';
 
 const Transferencia: React.FC = () => {
   const [conta, setConta] = useState("");
@@ -39,9 +41,11 @@ const Transferencia: React.FC = () => {
           },
         })
         .then((response) => {
-          console.log(response.status);
+          toast.success("Transferencia realizada com Sucesso")
         })
-        .catch((e) => {});
+        .catch((e) => {
+          toast.error("Ops, algo deu errado!")
+        });
     } catch (e) {
       
     }

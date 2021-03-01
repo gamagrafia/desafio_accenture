@@ -1,5 +1,6 @@
 import React, { FormEvent, useCallback, useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import ArrowGray from '../../../img/arrowgray.png';
 import Arrow from '../../../img/arrowwhite.png';
@@ -37,13 +38,13 @@ const Main: React.FC = () => {
         response => {
           if (response.status === 200) {
             console.log(response.status)
-            alert("Registrado")
+            toast.success("Registrado")
             history.push('/login')
           }
         }
       ).catch((e) => {
         if (e.response.status === 400) {
-          alert(`Usuario: ${userName} ja esta sendo usado! Tente outro.`)
+          toast.error(`Usuario: ${userName} ja esta sendo usado! Tente outro.`)
         } else {
           alert(`Error message: ${e.message}`)
         }

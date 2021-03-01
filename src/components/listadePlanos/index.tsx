@@ -1,24 +1,26 @@
-import { useState, FormEvent, useEffect } from "react";
-import api from "../../services/api";
-import { Container,  } from "./style";
 import decode from 'jwt-decode';
+import { Component, FormEvent, useEffect, useState } from 'react';
+
+import api from '../../services/api';
+import { Container } from './style';
 
 
-interface IUserDash{
+interface IUserDash {
   idUsuario: number,
   sub: string
 }
-interface IUserPlans{
-  id:string,
-  descricao:string,
-  login:string,
-  tipoMovimento:string,
+interface IUserPlans {
+  id: string,
+  descricao: string,
+  login: string,
+  tipoMovimento: string,
   padrao: boolean,
-  
+
 
 }
 
 const Planos: React.FC = () => {
+
   const [planos, setPlanos] = useState([{
     "id": 2592,
     "descricao": "RECEITAS",
@@ -26,7 +28,9 @@ const Planos: React.FC = () => {
     "tipoMovimento": "R",
     "padrao": true
   }]);
-  
+
+  const [laoding,setLoading] = useState(false)
+
 
   const TokenStorage = null || localStorage.getItem('@tokenApp')
 
@@ -43,49 +47,59 @@ const Planos: React.FC = () => {
 
   }
 
+
   useEffect(() => {
+    setLoading(true)
 
     api.get(`/lancamentos/planos-conta?login=${TokenDecodedValue()}`, {
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": localStorage.getItem("@tokenApp"),
-        },
-      })
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": localStorage.getItem("@tokenApp"),
+      },
+    })
       .then((res) => {
-        
+
         const planos = (res.data);
         setPlanos(planos);
-      
-        
+        setLoading(false)
+
+
         console.log(planos);
-        
+
       });
 
 
-      
+
   }, []);
- 
- 
+
+
   return (
     <>
-    <Container> 
+      <Container>
+        <div>
+          <h1> Seus planos de Conta</h1>
+          
+          <div>
 
-      <h1> Seus planos de Conta!</h1>
+            {planos.map(plano =>
+              
+              <h3 key={plano.id}> {plano.descricao} do tipo : {plano.tipoMovimento}</h3>
+            )}
+          </div>
 
-        {planos.map(plano => 
-          
-          <h1 key={plano.id}> Seu plano de Conta: {plano.descricao} do tipo : {plano.tipoMovimento}</h1>
-          
-          
-          
-          
-          
-          
-          )}
-    
-     
-    </Container>
-     
+        </div>
+
+
+
+
+
+
+
+
+
+
+      </Container>
+
     </>
   );
 };

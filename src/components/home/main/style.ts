@@ -30,8 +30,7 @@ export const SectionOne = styled.section`
     background-image: url(${backgroundImg});
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: 40%;
-   
+    background-size: 800px;   
     height: 90vh;
     
     display: flex;
@@ -96,6 +95,9 @@ export const SideLeft = styled.div`
 `
 
 export const SideRight = styled.div`
+    display:flex;
+    justify-content: center;
+    align-items: center;
     
 `
 
@@ -103,9 +105,10 @@ export const SideRight = styled.div`
 export const Form = styled.form`
     
     background-color:#fff;
-    padding: 40px;
-    width: 350px;
+    padding: 30px;
+    width: 360px;
     border-radius: 8px;
+    margin-bottom: 40px;
     h2{
         font-size:19px;
         font-weight: 500;
@@ -113,8 +116,8 @@ export const Form = styled.form`
     input{
         display:block;
         border: none;
-        font-size: 12px;
-        padding: 8px;
+        font-size: 1.4rem;
+        padding: 10px;
         font-weight: 300;
         text-align:left;
         width: 100%;
@@ -129,12 +132,14 @@ export const Form = styled.form`
         cursor: pointer;
         border: none;
         border-radius: 20px;
-        color: #9B9B9B;   
+        color: #fff;
+
+        background-color:#8C52E5;
         width: 100%; 
         padding: 12px 21px;
         text-align: left;
         width: 270px;
-        font-size: 12px;
+        font-size: 1.0rem;
         &:hover{
             background: #68DE5A;
         }
