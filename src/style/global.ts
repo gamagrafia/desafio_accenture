@@ -9,4 +9,15 @@ export default createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+body{
+    background: #8C52E5;
+}
+
+button{
+    cursor: pointer;
+}
+
+a{
+    text-decoration:none;
+}
 `
