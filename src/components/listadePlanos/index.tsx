@@ -19,11 +19,17 @@ interface IUserPlans{
 }
 
 const Planos: React.FC = () => {
-  const [planos, setplanos] = useState<IUserPlans[]>([]);
+  const [planos, setPlanos] = useState([{
+    "id": 2592,
+    "descricao": "RECEITAS",
+    "login": "flavio100",
+    "tipoMovimento": "R",
+    "padrao": true
+  }]);
   const [lancamentos,setLancamentos] = useState();
 
 
-  const data = []
+  
 
   const TokenStorage = null || localStorage.getItem('@tokenApp')
 
@@ -41,6 +47,7 @@ const Planos: React.FC = () => {
   }
 
   useEffect(() => {
+
     api.get(`/lancamentos/planos-conta?login=${TokenDecodedValue()}`, {
         headers: {
           "Content-Type": "application/json",
@@ -48,12 +55,17 @@ const Planos: React.FC = () => {
         },
       })
       .then((res) => {
-
-        setplanos(JSON.parse(res.data));
         
-        console.log(res.data);
+        const planos = (res.data);
+        setPlanos(planos);
+      
+        
+        console.log(planos);
         
       });
+
+
+      
   }, []);
  
 
@@ -61,7 +73,7 @@ const Planos: React.FC = () => {
     <>
     <Container> 
     <h1> Esses são os seus Planos atuais:</h1>
-    <h1>{planos.map(item => ( item.id))}</h1>
+    <h1>{planos.map(plano => plano.id)}</h1>
     
     
      

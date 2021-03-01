@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AiOutlineBank, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { GiWallet } from 'react-icons/gi';
 import { RiCloseLine, RiMoneyDollarCircleLine } from 'react-icons/ri';
@@ -8,20 +8,98 @@ import { BankPostBox, BoxAccount, DashContainer, MainContent, SideBar, SideBarBu
 import Depositos from '../../components/deposito';
 import Transferencia from'../../components/transferencias';
 import Planos from '../../components/listadePlanos/index';
+import api from '../../services/api'
 
+
+
+export interface IDataAccount {
+
+    contaBanco: {
+      id: number,
+      lancamentos: [
+        {
+          conta: number,
+          data: string,
+          descricao: string,
+          id: number,
+          planoConta: {
+            descricao: string,
+            id: number,
+            login: string,
+            padrao: boolean,
+            tipoMovimento: string
+          },
+          tipo: string,
+          valor: number
+        }
+      ],
+      saldo: number
+    },
+    contaCredito: {
+        id: number,
+              lancamentos: [
+                {
+                  conta: number,
+                  data: string,
+                  descricao: string,
+                  id: number,
+                  planoConta: {
+                    descricao: string,
+                    id: number,
+                    login: string,
+                    padrao: boolean,
+                    tipoMovimento: string
+                  },
+                  tipo: string,
+                  valor: number
+                }
+              ],
+              saldo: number
+            }}
 
 
 
 
 const Dashboard: React.FC = () => {
+
     const history = useHistory();
 
    const [showDeposito, setShowDeposito] = useState(false)
    const [showTransferencia, setShowTransferencia] = useState(false)
    const [showPlanos, setShowPlanos] = useState(false)
    const [ hidemainSection, setHideMainSection ] = useState(false)
-    
+   const [lancamentos, setLancamentos] = useState<IDataAccount[]>([])
 
+   useEffect(() => {
+    try {
+        api.get("/dashboard", {
+       params: {
+       inicio: '2021-01-01',
+       fim: '2021-01-31',
+       login: 'flavio100'
+           },
+         headers: {
+           "Content-Type": "application/json",
+           "Authorization": localStorage.getItem("@tokenApp"),
+         },
+       })
+       .then((response) => {
+
+         const data = (response.data);
+         setLancamentos(data);
+         console.log(lancamentos)
+       })
+       .catch((e) => {});
+   } catch (e) {
+     
+   }
+    }, [setLancamentos])
+
+    // lancamentos[0].contaCredito.lancamentos.map(item => console.log(item))
+
+    console.log('sou o lancamento',lancamentos)
+
+   
 
 
     function handleShowDeposito(){
@@ -114,8 +192,7 @@ const Dashboard: React.FC = () => {
                             <h3>Compra no Debito</h3>
                             <h4>Gama Academy</h4>
                             <div className="lancamentos" >
-                                <h1>R$100,00</h1>
-                                <p>24nov</p>
+                           
                             </div>
                         </div>
                     </div>

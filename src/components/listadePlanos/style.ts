@@ -6,10 +6,12 @@ export const Container = styled.div`
     background-color: #fff;
     padding: 55px;
     display: flex;
-    flex-direction:row;
+    flex-direction:column;
     border-radius: 8px;
     justify-content:space-aroud;
     align-items:center;
+
+    div{}
 
     h1{
         padding:8px;
