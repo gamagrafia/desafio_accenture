@@ -95,7 +95,7 @@ const Dashboard: React.FC = () => {
    }
     }, [setLancamentos])
 
-    // lancamentos[0].contaCredito.lancamentos.map(item => console.log(item))
+    
 
     console.log('sou o lancamento',lancamentos)
 

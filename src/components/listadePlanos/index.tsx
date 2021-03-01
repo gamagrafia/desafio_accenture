@@ -26,9 +26,6 @@ const Planos: React.FC = () => {
     "tipoMovimento": "R",
     "padrao": true
   }]);
-  const [lancamentos,setLancamentos] = useState();
-
-
   
 
   const TokenStorage = null || localStorage.getItem('@tokenApp')
@@ -68,13 +65,23 @@ const Planos: React.FC = () => {
       
   }, []);
  
-
+ 
   return (
     <>
     <Container> 
-    <h1> Esses são os seus Planos atuais:</h1>
-    <h1>{planos.map(plano => plano.id)}</h1>
-    
+
+      <h1> Seus planos de Conta!</h1>
+
+        {planos.map(plano => 
+          
+          <h1 key={plano.id}> Seu plano de Conta: {plano.descricao} do tipo : {plano.tipoMovimento}</h1>
+          
+          
+          
+          
+          
+          
+          )}
     
      
     </Container>
