@@ -83,7 +83,7 @@ const Planos: React.FC = () => {
 
             {planos.map(plano =>
               
-              <h3 key={plano.id}> {plano.descricao} do tipo : {plano.tipoMovimento}</h3>
+              <h3 key={plano.id}> {plano.descricao} do tipo : {plano.tipoMovimento} com o ID:{plano.id}</h3>
             )}
           </div>
 
