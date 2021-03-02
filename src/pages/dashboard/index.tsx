@@ -9,6 +9,7 @@ import { useHistory } from 'react-router-dom';
 import Depositos from '../../components/deposito';
 import Planos from '../../components/listadePlanos';
 import Transferencia from '../../components/transferencias';
+import NovoPlano from '../../components/criarPlanos'
 import logoDash from '../../img/logo-dash.svg';
 import api from '../../services/api';
 import { IDataAccount, IUserDash } from '../../store/modules/user/interfaces';
@@ -21,6 +22,7 @@ const Dashboard: React.FC = () => {
     const [hidemainSection, setHideMainSection] = useState(false)
     const [showTransferencia, setShowTransferencia] = useState(false)
     const [showPlanos, setShowPlanos] = useState(false)
+    const [showCriarPlanos, setShowCriarPlanos] = useState(false)
     const history = useHistory();
     const [accountData, setAccountData] = useState<IDataAccount>();
     const TokenStorage = null || localStorage.getItem('@tokenApp')
@@ -64,7 +66,7 @@ const Dashboard: React.FC = () => {
                 });
         } catch (e) {
         }
-    }, [showDeposito, showPlanos, showTransferencia])
+    }, [showDeposito, showPlanos, showTransferencia,showCriarPlanos])
  
     const TokenDecodedValue = () => {
         if (TokenStorage) {
@@ -80,7 +82,6 @@ const Dashboard: React.FC = () => {
     function handleShowDeposito() {
         showDeposito ? setShowDeposito(false) : setShowDeposito(true)
         hidemainSection ? setHideMainSection(false) : setHideMainSection(true)
-        // console.log('teste')
         setShowPlanos(false);
         setShowTransferencia(false);
     }
@@ -92,6 +93,7 @@ const Dashboard: React.FC = () => {
 
         setShowPlanos(false);
         setShowDeposito(false);
+        setShowCriarPlanos(false);
     }
     function handleShowPlanos() {
 
@@ -99,6 +101,16 @@ const Dashboard: React.FC = () => {
         hidemainSection ? setHideMainSection(false) : setHideMainSection(true)
         setShowDeposito(false);
         setShowTransferencia(false);
+        setShowCriarPlanos(false);
+    }
+
+    function handleShowCriarPlanos() {
+
+        showCriarPlanos ? setShowCriarPlanos(false) : setShowCriarPlanos(true)
+        hidemainSection ? setHideMainSection(false) : setHideMainSection(true)
+        setShowDeposito(false);
+        setShowTransferencia(false);
+        setShowPlanos(false)
     }
 
 
@@ -112,6 +124,7 @@ const Dashboard: React.FC = () => {
                     <SideBarButton onClick={handleShowDeposito}><AiOutlineBank size={35} />Depósitos</SideBarButton>
                     <SideBarButton onClick={handleShowTransferencia}><AiOutlineBank size={35} />Transferências </SideBarButton>
                     <SideBarButton onClick={handleShowPlanos}><AiOutlineBank size={35} />Planos</SideBarButton>
+                    <SideBarButton onClick={handleShowCriarPlanos}><AiOutlineBank size={35} />Criar Plano</SideBarButton>
                     <GiExitDoor cursor="pointer" className="icon-exit" onClick={closeSession} size={50} color=" #000" />
                 </SideBar>
                 <MainContent>
@@ -124,7 +137,10 @@ const Dashboard: React.FC = () => {
                     {showPlanos === true &&
                         <Planos />
                     }
-                    {showDeposito || showTransferencia || showPlanos === false &&
+                    {showCriarPlanos === true &&
+                        <NovoPlano/>
+                    }
+                    {showDeposito || showTransferencia || showPlanos || showCriarPlanos=== false &&
                         <>
                             <div>
                                 <h2>Olá <span>{login}</span>, seja bem vindo!</h2><BiExit cursor="pointer" onClick={closeSession} size={40} color=" #68DE5A" />
