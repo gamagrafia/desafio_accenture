@@ -2,7 +2,8 @@ import decode from 'jwt-decode';
 import React, { useEffect, useState } from 'react';
 import { AiOutlineBank } from 'react-icons/ai';
 import { BiExit } from 'react-icons/bi';
-import { GiExitDoor, GiWallet } from 'react-icons/gi';
+import {RiBankCardFill} from 'react-icons/ri';
+import { GiExitDoor, GiWallet, GiBanknote,GiPiggyBank } from 'react-icons/gi';
 import { RiMoneyDollarCircleLine } from 'react-icons/ri';
 import ReactLoading from 'react-loading';
 import { useHistory } from 'react-router-dom';
@@ -121,9 +122,9 @@ const Dashboard: React.FC = () => {
             <DashContainer>
                 <SideBar>
                     <img src={logoDash} alt="Logo Dashboard" />
-                    <SideBarButton onClick={handleShowDeposito}><AiOutlineBank size={35} />Depósitos</SideBarButton>
-                    <SideBarButton onClick={handleShowTransferencia}><AiOutlineBank size={35} />Transferências </SideBarButton>
-                    <SideBarButton onClick={handleShowPlanos}><AiOutlineBank size={35} />Planos</SideBarButton>
+                    <SideBarButton onClick={handleShowDeposito}>< GiPiggyBank size={35} />Depósitos</SideBarButton>
+                    <SideBarButton onClick={handleShowTransferencia}>< GiBanknote size={35} />Transferências </SideBarButton>
+                    <SideBarButton onClick={handleShowPlanos}><RiBankCardFill size={35} />Planos</SideBarButton>
                     <SideBarButton onClick={handleShowCriarPlanos}><AiOutlineBank size={35} />Criar Plano</SideBarButton>
                     <GiExitDoor cursor="pointer" className="icon-exit" onClick={closeSession} size={50} color=" #000" />
                 </SideBar>
