@@ -5,9 +5,7 @@ import { BiExit } from 'react-icons/bi';
 import { GiExitDoor, GiWallet } from 'react-icons/gi';
 import { RiMoneyDollarCircleLine } from 'react-icons/ri';
 import ReactLoading from 'react-loading';
-import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-
 import Depositos from '../../components/deposito';
 import Planos from '../../components/listadePlanos';
 import Transferencia from '../../components/transferencias';
@@ -16,7 +14,6 @@ import api from '../../services/api';
 import { IDataAccount, IUserDash } from '../../store/modules/user/interfaces';
 import { BankPostBox, BoxAccount, DashContainer, MainContent, SideBar, SideBarButton } from './style';
 
-// import from "react-loading";
 const Dashboard: React.FC = () => {
     // let globalState = useSelector((state:IUserState) => state.users);
     const [dataAccount, setDataAccount] = useState<IDataAccount>();
@@ -25,11 +22,9 @@ const Dashboard: React.FC = () => {
     const [showTransferencia, setShowTransferencia] = useState(false)
     const [showPlanos, setShowPlanos] = useState(false)
     const history = useHistory();
-    const dispatch = useDispatch();
     const [accountData, setAccountData] = useState<IDataAccount>();
     const TokenStorage = null || localStorage.getItem('@tokenApp')
     const [lancamentos, setLancamentos] = useState<IDataAccount[]>([])
-    const [showNovosPlanos, setShowNovosPlanos] = useState(false)
     const [isLoading, setLoading] = useState(false);
 
     const login = localStorage.getItem('@login');
@@ -70,7 +65,7 @@ const Dashboard: React.FC = () => {
         } catch (e) {
         }
     }, [showDeposito, showPlanos, showTransferencia])
-    // const dashState = useSelector((state:IDataAccountState) => state.lancamentosAccount)
+ 
     const TokenDecodedValue = () => {
         if (TokenStorage) {
             const TokenArr = TokenStorage.split(' ')

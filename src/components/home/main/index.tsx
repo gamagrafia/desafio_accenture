@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 
 import ArrowGray from '../../../img/arrowgray.png';
 import Arrow from '../../../img/arrowwhite.png';
-import Logo from '../../../img/logo.png';
+import Logo from '../../logo/';
 import api from '../../../services/api';
 import { Container, Form, Header, SectionOne, SideLeft, SideRight } from './style';
 
@@ -62,14 +62,10 @@ const Main: React.FC = () => {
   return (
 
     <Container>
-      <Header>
-        <Link to="/">
-          <img className="logo-gama" src={Logo} alt="" />
-        </Link>
-      </Header>
+     <Logo/>
       <SectionOne>
         <SideLeft>
-          <h2>Gama Bank é um projeto de nossos alunos.</h2>
+          <h2 className="ttl-home">Gama Bank é um projeto de nossos alunos.</h2>
           <h2>Já tem conta?</h2>
           <Link to="/login">
             <button>Acessar <img src={Arrow} alt="" /></button>

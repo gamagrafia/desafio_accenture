@@ -84,12 +84,18 @@ export const SideLeft = styled.div`
             height: 16px;
         }
         @media(max-width: 700px){
-        margin: 50px 0;
+        
         text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        h2{
+            display:none;
+        }
+        button{
+            margin-top:80px;
+        }
     }
     
 `
